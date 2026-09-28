@@ -1,0 +1,64 @@
+---
+import { getProduct } from '../data/products';
+
+export const LINK_AREAS = [
+  'review_hero',
+  'review_summary',
+  'review_pricing',
+  'review_kits',
+  'review_conclusion',
+  'article_inline',
+  'category_featured',
+  'home_featured',
+] as const;
+
+export type LinkArea = (typeof LINK_AREAS)[number];
+
+interface Props {
+  productId: string;
+  productName?: string;
+  href?: string;
+  linkArea: LinkArea;
+  label: string;
+  variant?: 'primary' | 'secondary';
+  class?: string;
+  id?: string;
+}
+
+const { productId, productName, href, linkArea, label, variant = 'primary', class: className = '', id } = Astro.props;
+const product = getProduct(productId);
+
+if (!product) throw new Error(`AffiliateCTA: unknown productId "${productId}"`);
+if (product.status !== 'published' || !product.affiliateUrl) {
+  throw new Error(`AffiliateCTA: product "${productId}" has no published affiliate URL`);
+}
+if (productName !== undefined && productName !== product.name) {
+  throw new Error(`AffiliateCTA: productName does not match the central product record for "${productId}"`);
+}
+if (href !== undefined && href !== product.affiliateUrl) {
+  throw new Error(`AffiliateCTA: href must match the central affiliateUrl for "${productId}"`);
+}
+if (!LINK_AREAS.includes(linkArea)) throw new Error(`AffiliateCTA: unsupported linkArea "${linkArea}"`);
+
+const destination = new URL(product.affiliateUrl);
+if (!['https:', 'http:'].includes(destination.protocol)) {
+  throw new Error(`AffiliateCTA: affiliateUrl must be an HTTP(S) URL for "${productId}"`);
+}
+
+const ctaId = id ?? `aff-${product.slug}-${linkArea.replaceAll('_', '-')}`;
+if (!/^[A-Za-z][A-Za-z0-9_-]*$/.test(ctaId)) {
+  throw new Error(`AffiliateCTA: invalid HTML id "${ctaId}"`);
+}
+---
+<a
+  id={ctaId}
+  class:list={['button', { 'button--light': variant === 'secondary' }, className]}
+  href={destination.href}
+  target="_blank"
+  rel="sponsored nofollow noopener noreferrer"
+  data-affiliate-click="true"
+  data-product-id={product.id}
+  data-product-name={product.name}
+  data-link-area={linkArea}
+>{label}<span aria-hidden="true">↗</span></a>
+<script>import '../scripts/affiliate-tracking';</script>

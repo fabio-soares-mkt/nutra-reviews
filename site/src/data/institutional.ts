@@ -28,7 +28,7 @@ export const institutionalPages: InstitutionalPage[] = [
       { heading: '3. Consider the evidence', paragraphs: ['We will look for relevant, reliable sources and describe how closely they apply to the product, ingredient, amount, and question at hand. Evidence about an ingredient should not automatically be treated as evidence about a finished product.'] },
       { heading: '4. Weigh practical terms', paragraphs: ['Price, recurring charges, return policies, availability, and manufacturer information can matter to a purchasing decision. These details can change, so readers should confirm them with the seller.'] },
       { heading: '5. Explain the verdict and its limits', paragraphs: ['A conclusion should make its reasoning visible, acknowledge uncertainty, and identify safety considerations without giving personal medical advice. Reviews should be revisited when material facts change.'] },
-      { heading: 'Commercial transparency', paragraphs: ['Future pages may include affiliate links. Any such relationship will be disclosed, and it will not determine the editorial conclusion. No affiliate links or tracking are installed in this initial version.'] },
+      { heading: 'Commercial transparency', paragraphs: ['Future pages may include affiliate links. Any such relationship will be disclosed, and it will not determine the editorial conclusion. No affiliate links are published yet. Technical support for future click events is in place, but no product CTA is live.'] },
     ],
   },
   {
@@ -46,7 +46,7 @@ export const institutionalPages: InstitutionalPage[] = [
   {
     slug: 'affiliate-disclosure', title: 'Affiliate Disclosure', eyebrow: 'Commercial transparency',
     description: 'Understand how affiliate relationships may be handled by Nutra Lens.',
-    intro: 'Nutra Lens may use affiliate links in future product coverage. This first version of the site has no affiliate links or affiliate tracking.',
+    intro: 'Nutra Lens may use affiliate links in future product coverage. No affiliate links are currently published. The site includes technical support for future click events, which requires a published affiliate CTA to fire.',
     sections: [
       { heading: 'How affiliate links may work', paragraphs: ['If we add affiliate links, we may receive a commission when a reader purchases through one. The reader’s price may or may not be affected, depending on the seller’s terms. We will label these links where they appear and update this page when the program is active.'] },
       { heading: 'Editorial separation', paragraphs: ['A potential commission should not decide which products are covered or what an editorial conclusion says. We intend to evaluate product information using the framework described in How We Review.'] },
@@ -56,11 +56,11 @@ export const institutionalPages: InstitutionalPage[] = [
   {
     slug: 'privacy-policy', title: 'Privacy Policy', eyebrow: 'Your information',
     description: 'Read the initial privacy information for Nutra Lens.',
-    intro: 'This policy describes the first version of Nutra Lens, published September 28, 2026. It will be revised if the site adds accounts, forms, newsletters, analytics, or other data practices.',
+    intro: 'This policy describes Nutra Lens as updated September 28, 2026. It will be revised as accounts, forms, newsletters, measurement, or other data practices change.',
     sections: [
       { heading: 'Information you provide', paragraphs: ['This version of the site has no account registration, newsletter form, or contact form. It does not ask you to submit personal information through the website.'] },
       { heading: 'Technical information', paragraphs: ['Our hosting and network providers may process technical data needed to deliver the site, such as an IP address, browser information, requested pages, and security logs. Their retention and handling are governed by their own systems and applicable terms.'] },
-      { heading: 'Cookies and measurement', paragraphs: ['Nutra Lens has not installed Google Analytics, Google Tag Manager, affiliate tracking, or its own advertising cookies in this version. Third-party services linked from this site, if any, have their own privacy practices.'] },
+      { heading: 'Cookies and measurement', paragraphs: ['Nutra Lens loads Google Tag Manager to manage site tags. Tags activated inside that container may process technical usage data; the container configuration is managed separately from this site code. The site code does not install Google Analytics directly, and no affiliate links are currently published. Third-party services linked from this site have their own privacy practices.'] },
       { heading: 'Changes and questions', paragraphs: ['We will update this policy when site features change. A monitored privacy contact channel is being established and will be published on the Contact page.'] },
     ],
   },
