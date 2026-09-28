@@ -1,0 +1,18 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { guides } from '../../data/content';
+---
+<ArticleLayout title="What makes a useful supplement review?" description="The questions we think a review should answer before it reaches a verdict." category="Research" categoryHref="/research/" date="2026-09-28" related={[guides[0]]}>
+  <div slot="contents" class="contents-list"><a href="#define-the-product">Define the product</a><a href="#separate-claims">Separate claims and support</a><a href="#compare-practical-details">Compare practical details</a><a href="#show-the-limits">Show the limits</a></div>
+  <p>A review should make a product easier to understand. That means showing what was examined, which questions remain open, and how a conclusion follows from the available information.</p>
+  <h2 id="define-the-product">Define the product</h2>
+  <p>Start with the exact formulation and the information available at the time of review. Product names can stay the same while labels, serving sizes, prices, and policies change. A useful review identifies the version it discusses and points readers toward current product details.</p>
+  <h2 id="separate-claims">Separate claims and support</h2>
+  <p>A product's marketing statement is a claim. A label is a source of product information. Research may provide context for an ingredient or a question, but it may not test the same finished product or dose. A review should keep these distinctions visible.</p>
+  <div class="editorial-box"><strong>Our starting rule</strong><p>If the information does not support a firm conclusion, we should say so plainly.</p></div>
+  <h2 id="compare-practical-details">Compare practical details</h2>
+  <p>Price per serving, subscription terms, return policies, directions, and disclosed warnings can affect how useful a product is to a reader. These details deserve the same care as the headline ingredients. Buying options should be clearly identified, and any commercial relationship should be disclosed.</p>
+  <h2 id="show-the-limits">Show the limits</h2>
+  <p>No single verdict works for everyone. A review should explain who a product may be intended for, what it cannot establish, and when a personal question belongs with a qualified professional. It should also be updated when material product information changes.</p>
+  <p>We are building our review library around these principles. Read our <a href="/how-we-review/">review process</a> and <a href="/editorial-policy/">editorial policy</a> for the standards we aim to apply.</p>
+</ArticleLayout>

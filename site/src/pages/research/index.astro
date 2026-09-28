@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import EditorialCard from '../../components/EditorialCard.astro';
+import { guides } from '../../data/content';
+---
+<BaseLayout title="Research" description="Explore how Nutra Lens approaches product information, evidence, and the questions behind supplement reviews.">
+  <div class="page-hero"><Container><Breadcrumbs items={[{ label: 'Research' }]} /><div class="page-hero__inner"><span class="eyebrow">The research desk</span><h1>Look closer at the evidence.</h1><p>Research can inform a product review, but its relevance depends on the question, the formulation, and the quality of what is available. This desk collects our introductory guides and approach.</p></div></Container></div>
+  <Container>
+    <section class="section-block" aria-labelledby="research-reading"><div class="section-heading"><div><span class="eyebrow">Reading list</span><h2 id="research-reading">Guides & perspective</h2></div></div><div class="editorial-grid">{guides.map((item) => <EditorialCard item={item} />)}</div></section>
+    <section class="institutional-band" aria-labelledby="research-method"><div><span class="eyebrow">Our standards</span><h2 id="research-method">How we assess information</h2><p>We separate product claims from evidence, identify the limits of what we can verify, and make our editorial and commercial policies accessible.</p></div><a class="button" href="/how-we-review/">Read our process <span aria-hidden="true">↗</span></a></section>
+  </Container>
+</BaseLayout>

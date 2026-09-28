@@ -1,0 +1,39 @@
+---
+import Brand from './Brand.astro';
+import Container from './Container.astro';
+import { categories } from '../data/content';
+---
+<footer class="site-footer">
+  <Container class="site-footer__grid">
+    <div class="site-footer__intro">
+      <Brand compact />
+      <p>Clearer context for better questions about supplements and wellness products.</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <ul>{categories.map(({ slug, title }) => <li><a href={`/categories/${slug}/`}>{title}</a></li>)}</ul>
+    </div>
+    <div>
+      <h2>Our approach</h2>
+      <ul>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/how-we-review/">How We Review</a></li>
+        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+        <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Nutra Lens</h2>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms</a></li>
+      </ul>
+    </div>
+  </Container>
+  <Container class="site-footer__bottom">
+    <small>© {new Date().getFullYear()} Nutra Lens</small>
+    <small>Information on this site is for general education and does not replace professional advice.</small>
+  </Container>
+</footer>

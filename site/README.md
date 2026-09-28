@@ -1,46 +1,30 @@
-# Astro Starter Kit: Basics
+# Nutra Lens
+
+Nutra Lens is a static Astro editorial site for clear, measured coverage of supplements and wellness products. The production URL is `https://nutralens.shop`.
+
+## Work locally
+
+Use Node 22 or newer (at least 22.12). In `site/`:
 
 ```sh
-npm create astro@latest -- --template basics
+npm ci
+npm run dev
+npm run build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The production build writes to `dist/`. The existing Dockerfile copies that output into Nginx; its build context is `site/`.
 
-## 🚀 Project Structure
+## Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+- `src/data/content.ts`: category navigation, introductory guides, and sitemap routes.
+- `src/data/institutional.ts`: initial institutional page copy.
+- `src/components/`: navigation, footer, breadcrumbs, and reusable cards.
+- `src/layouts/BaseLayout.astro`: shared HTML shell and SEO metadata.
+- `src/layouts/ArticleLayout.astro`: editorial articles with optional contents, image, references, and related reading.
+- `src/layouts/ReviewLayout.astro`: future review sections. No product review is published yet.
+- `src/pages/`: static routes and `sitemap.xml`.
+- `src/styles/global.css`: visual system and responsive styles.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+The current site intentionally has only two introductory guides. Add product reviews only after the product information, evidence, disclosures, and review facts can be verified. Keep `allRoutes` in `src/data/content.ts` current when adding pages so the sitemap stays complete.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+There is no analytics, tag manager, affiliate tracking, account system, or contact form in this version.

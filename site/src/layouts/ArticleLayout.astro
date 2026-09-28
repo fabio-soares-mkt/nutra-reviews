@@ -1,0 +1,39 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Container from '../components/Container.astro';
+import EditorialCard from '../components/EditorialCard.astro';
+import type { EditorialItem } from '../data/content';
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  categoryHref: string;
+  author?: string;
+  date?: string;
+  heroImage?: { src: string; alt: string };
+  related?: EditorialItem[];
+}
+
+const { title, description, category, categoryHref, author = 'Nutra Lens', date, heroImage, related = [] } = Astro.props;
+---
+<BaseLayout title={title} description={description} type="article">
+  <Container>
+    <Breadcrumbs items={[{ label: category, href: categoryHref }, { label: title }]} />
+    <header class="article-header">
+      <span class="eyebrow">{category}</span>
+      <h1>{title}</h1>
+      <p class="article-header__dek">{description}</p>
+      <div class="article-header__meta"><span>By {author}</span>{date && <><span aria-hidden="true">·</span><time datetime={date}>{new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</time></>}</div>
+    </header>
+    {heroImage && <figure class="article-hero"><img src={heroImage.src} alt={heroImage.alt} loading="eager" /><slot name="hero-caption" /></figure>}
+    <div class="article-shell">
+      <article class="article-body"><slot /></article>
+      {Astro.slots.has('contents') && <aside class="article-aside" aria-label="On this page"><h2>On this page</h2><slot name="contents" /></aside>}
+    </div>
+    {Astro.slots.has('references') && <section class="article-references" aria-labelledby="references-heading"><h2 id="references-heading">References</h2><slot name="references" /></section>}
+    {related.length > 0 && <section class="section-block" aria-labelledby="related-heading"><div class="section-heading"><div><span class="eyebrow">Continue reading</span><h2 id="related-heading">Related reading</h2></div></div><div class="editorial-grid">{related.map((item) => <EditorialCard item={item} />)}</div></section>}
+    <div class="article-endnote"><p>Our approach starts with clear product information and careful claims.</p><a class="text-link" href="/how-we-review/">How we review <span aria-hidden="true">↗</span></a></div>
+  </Container>
+</BaseLayout>

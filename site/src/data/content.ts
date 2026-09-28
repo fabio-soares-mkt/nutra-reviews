@@ -1,0 +1,103 @@
+export type EditorialItem = {
+  title: string;
+  description: string;
+  href: string;
+  label: string;
+  category: string;
+};
+
+export type Category = {
+  slug: string;
+  title: string;
+  eyebrow: string;
+  description: string;
+  focus: string[];
+  accent: string;
+};
+
+export const categories: Category[] = [
+  {
+    slug: 'supplements',
+    title: 'Supplements',
+    eyebrow: 'The essentials',
+    description: 'A clearer way to explore supplement labels, ingredients, evidence, and the questions worth asking before you buy.',
+    focus: ['Ingredients', 'Labels', 'Evidence'],
+    accent: 'sage',
+  },
+  {
+    slug: 'weight-metabolism',
+    title: 'Weight & Metabolism',
+    eyebrow: 'The wider picture',
+    description: 'Context for a category often crowded with bold promises. We look at claims, trade-offs, and what product information can actually tell you.',
+    focus: ['Claims', 'Formulas', 'Context'],
+    accent: 'clay',
+  },
+  {
+    slug: 'sleep-recovery',
+    title: 'Sleep & Recovery',
+    eyebrow: 'Rest, examined',
+    description: 'An editorial home for sleep and recovery products, with attention to ingredients, practical use, and the limits of available evidence.',
+    focus: ['Sleep', 'Recovery', 'Routines'],
+    accent: 'blue',
+  },
+  {
+    slug: 'brain-focus',
+    title: 'Brain & Focus',
+    eyebrow: 'Think clearly',
+    description: 'A measured look at products marketed for focus and cognition, starting with transparent labels and well-framed evidence.',
+    focus: ['Focus', 'Cognition', 'Evidence'],
+    accent: 'lavender',
+  },
+  {
+    slug: 'gut-health',
+    title: 'Gut Health',
+    eyebrow: 'Beyond the buzzwords',
+    description: 'Guides to understanding gut health products, their ingredients, and the details that make comparisons useful.',
+    focus: ['Probiotics', 'Fiber', 'Labels'],
+    accent: 'peach',
+  },
+  {
+    slug: 'wellness',
+    title: 'Wellness',
+    eyebrow: 'Everyday decisions',
+    description: 'A broad editorial space for wellness products and habits, approached with curiosity, context, and a healthy respect for uncertainty.',
+    focus: ['Daily life', 'Products', 'Perspective'],
+    accent: 'mint',
+  },
+];
+
+export const guides: EditorialItem[] = [
+  {
+    title: 'How to read a supplement label',
+    description: 'A practical starting point for serving sizes, ingredient lists, amounts, and the claims around them.',
+    href: '/guides/how-to-read-a-supplement-label/',
+    label: 'Guide',
+    category: 'Supplements',
+  },
+  {
+    title: 'What makes a useful supplement review?',
+    description: 'The questions we think a review should answer before it reaches a verdict.',
+    href: '/guides/what-makes-a-useful-review/',
+    label: 'Editorial guide',
+    category: 'Research',
+  },
+];
+
+export const primaryNav = [
+  ...categories.map(({ slug, title }) => ({ label: title, href: `/categories/${slug}/` })),
+  { label: 'Research', href: '/research/' },
+];
+
+export const allRoutes = [
+  '/',
+  ...categories.map(({ slug }) => `/categories/${slug}/`),
+  '/research/',
+  ...guides.map(({ href }) => href),
+  '/about/',
+  '/how-we-review/',
+  '/editorial-policy/',
+  '/affiliate-disclosure/',
+  '/privacy-policy/',
+  '/terms/',
+  '/contact/',
+];

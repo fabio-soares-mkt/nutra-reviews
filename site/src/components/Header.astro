@@ -1,0 +1,29 @@
+---
+import Brand from './Brand.astro';
+import Container from './Container.astro';
+import { primaryNav } from '../data/content';
+---
+<header class="site-header">
+  <Container class="site-header__top">
+    <Brand />
+    <div class="site-header__utility" aria-label="About Nutra Lens">
+      <a href="/about/">About</a>
+      <a href="/how-we-review/">How We Review</a>
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="Toggle navigation"><span></span><span></span><span></span><b>Menu</b></summary>
+      <nav aria-label="Mobile navigation">
+        {primaryNav.map((item) => <a href={item.href}>{item.label}</a>)}
+        <a href="/about/">About</a>
+        <a href="/how-we-review/">How We Review</a>
+      </nav>
+    </details>
+  </Container>
+  <div class="site-header__nav-wrap">
+    <Container>
+      <nav class="main-nav" aria-label="Primary navigation">
+        {primaryNav.map((item) => <a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>{item.label}</a>)}
+      </nav>
+    </Container>
+  </div>
+</header>

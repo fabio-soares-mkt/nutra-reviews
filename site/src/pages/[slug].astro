@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { institutionalPages } from '../data/institutional';
+import type { InstitutionalPage } from '../data/institutional';
+
+export function getStaticPaths() {
+  return institutionalPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+interface Props { page: InstitutionalPage }
+const { page } = Astro.props;
+---
+<BaseLayout title={page.title} description={page.description}>
+  <div class="page-hero"><Container><Breadcrumbs items={[{ label: page.title }]} /><div class="page-hero__inner"><span class="eyebrow">{page.eyebrow}</span><h1>{page.title}</h1><p>{page.intro}</p></div></Container></div>
+  <Container><article class="prose-page">{page.sections.map((section) => <section><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}{section.bullets && <ul>{section.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}</section>)}
+    {page.slug === 'about' && <p>Explore <a href="/how-we-review/">How We Review</a> and our <a href="/editorial-policy/">Editorial Policy</a>.</p>}
+    {page.slug === 'affiliate-disclosure' && <p>Read more about our approach in <a href="/how-we-review/">How We Review</a>.</p>}
+  </article></Container>
+</BaseLayout>

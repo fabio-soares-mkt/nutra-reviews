@@ -1,0 +1,45 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const { title, description, type = 'website', noindex = false } = Astro.props;
+const fullTitle = title === 'Nutra Lens' ? 'Nutra Lens | Clearer context for better decisions' : `${title} | Nutra Lens`;
+const canonical = new URL(Astro.url.pathname, 'https://nutralens.shop').href;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f8f7f2" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="Nutra Lens" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer />
+  </body>
+</html>

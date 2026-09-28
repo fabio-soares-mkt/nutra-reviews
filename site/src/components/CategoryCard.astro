@@ -1,0 +1,10 @@
+---
+import type { Category } from '../data/content';
+interface Props { category: Category; index?: number }
+const { category, index } = Astro.props;
+---
+<a class:list={['category-card', `category-card--${category.accent}`]} href={`/categories/${category.slug}/`}>
+  <span class="category-card__top"><span class="eyebrow">{category.eyebrow}</span><span aria-hidden="true">{String((index ?? 0) + 1).padStart(2, '0')}</span></span>
+  <span class="category-card__body"><strong>{category.title}</strong><span>{category.description}</span></span>
+  <span class="category-card__link">Explore category <span aria-hidden="true">↗</span></span>
+</a>

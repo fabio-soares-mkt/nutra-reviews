@@ -1,0 +1,54 @@
+---
+import ArticleLayout from './ArticleLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  categoryHref: string;
+  author?: string;
+  date?: string;
+  heroImage?: { src: string; alt: string };
+}
+const props = Astro.props;
+const sections = [
+  ['summary', 'Review summary'],
+  ['verdict', 'Editorial verdict'],
+  ['pros', 'Pros'],
+  ['cons', 'Cons'],
+  ['ingredients', 'Ingredients & composition'],
+  ['how-it-works', 'How it works'],
+  ['who-its-for', 'Who it may be for'],
+  ['pricing', 'Pricing'],
+  ['guarantees', 'Guarantees'],
+  ['manufacturer', 'Manufacturer'],
+  ['buying-options', 'Buying options'],
+  ['evidence', 'Evidence'],
+  ['safety', 'Safety considerations'],
+  ['faq', 'Frequently asked questions'],
+  ['conclusion', 'Conclusion'],
+] as const;
+---
+<ArticleLayout {...props}>
+  <div slot="contents" class="contents-list">
+    {sections.filter(([name]) => Astro.slots.has(name)).map(([name, heading]) => <a href={`#${name}`}>{heading}</a>)}
+  </div>
+  {Astro.slots.has('product-hero') && <div class="review-product"><slot name="product-hero" /></div>}
+  {Astro.slots.has('summary') && <section class="review-section" id="summary"><h2>Review summary</h2><slot name="summary" /></section>}
+  {Astro.slots.has('verdict') && <section class="review-section" id="verdict"><h2>Editorial verdict</h2><slot name="verdict" /></section>}
+  {Astro.slots.has('pros') && <section class="review-section" id="pros"><h2>Pros</h2><slot name="pros" /></section>}
+  {Astro.slots.has('cons') && <section class="review-section" id="cons"><h2>Cons</h2><slot name="cons" /></section>}
+  {Astro.slots.has('ingredients') && <section class="review-section" id="ingredients"><h2>Ingredients & composition</h2><slot name="ingredients" /></section>}
+  {Astro.slots.has('how-it-works') && <section class="review-section" id="how-it-works"><h2>How it works</h2><slot name="how-it-works" /></section>}
+  {Astro.slots.has('who-its-for') && <section class="review-section" id="who-its-for"><h2>Who it may be for</h2><slot name="who-its-for" /></section>}
+  {Astro.slots.has('pricing') && <section class="review-section" id="pricing"><h2>Pricing</h2><slot name="pricing" /></section>}
+  {Astro.slots.has('guarantees') && <section class="review-section" id="guarantees"><h2>Guarantees</h2><slot name="guarantees" /></section>}
+  {Astro.slots.has('manufacturer') && <section class="review-section" id="manufacturer"><h2>Manufacturer</h2><slot name="manufacturer" /></section>}
+  {Astro.slots.has('buying-options') && <section class="review-section" id="buying-options"><h2>Buying options</h2><slot name="buying-options" /></section>}
+  {Astro.slots.has('evidence') && <section class="review-section" id="evidence"><h2>Evidence</h2><slot name="evidence" /></section>}
+  {Astro.slots.has('safety') && <section class="review-section" id="safety"><h2>Safety considerations</h2><slot name="safety" /></section>}
+  {Astro.slots.has('faq') && <section class="review-section" id="faq"><h2>Frequently asked questions</h2><slot name="faq" /></section>}
+  {Astro.slots.has('conclusion') && <section class="review-section" id="conclusion"><h2>Conclusion</h2><slot name="conclusion" /></section>}
+  {Astro.slots.has('affiliate-cta') && <div class="review-cta"><slot name="affiliate-cta" /></div>}
+  {Astro.slots.has('references') && <div slot="references"><slot name="references" /></div>}
+</ArticleLayout>
