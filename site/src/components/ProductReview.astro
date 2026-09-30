@@ -1,0 +1,102 @@
+---
+import { Image } from 'astro:assets';
+import ReviewLayout from '../layouts/ReviewLayout.astro';
+import AffiliateCTA from './AffiliateCTA.astro';
+import { categories, guides, reviewItems } from '../data/content';
+import { getProduct } from '../data/products';
+import type { ReviewContent } from '../data/review-types';
+
+interface Props { review: ReviewContent }
+const { review } = Astro.props;
+const product = getProduct(review.productId);
+if (!product || product.status !== 'published') throw new Error(`Review has no published product: ${review.productId}`);
+const category = categories.find(({ title }) => title === product.category);
+if (!category) throw new Error(`Unknown category for ${product.id}`);
+const related = [
+  ...guides.slice(0, 1),
+  ...reviewItems.filter(({ href, category: name }) => name === product.category && href !== `/${product.slug}-review/`).slice(0, 2),
+  ...guides.slice(1),
+].slice(0, 3);
+const money = (amount: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount);
+const packageUnit = product.id === 'prostavive' ? 'tub' : 'bottle';
+---
+<ReviewLayout
+  title={review.title}
+  description={review.description}
+  category={product.category}
+  categoryHref={`/categories/${category.slug}/`}
+  date="2026-09-30"
+  related={related}
+>
+  <div slot="product-hero" class="review-product__grid">
+    <Image src={product.image.src} alt={product.image.alt} width={280} class="review-product__image" loading="eager" />
+    <div>
+      <p class="eyebrow">Product review · {product.category}</p>
+      <p>{review.lede}</p>
+      <p class="review-checked">Product details and offers checked <time datetime="2026-09-30">September 30, 2026</time>. Confirm current terms at checkout.</p>
+      <AffiliateCTA productId={product.id} linkArea="review_hero" id={`aff-${product.slug}-hero`} label="Check the current official offer" />
+      <p class="review-disclosure">We may earn a commission if you buy through this link. Read our <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
+    </div>
+  </div>
+
+  <div slot="summary">
+    <p>{review.whatItIs}</p>
+    <ul>{review.snapshot.map((point) => <li>{point}</li>)}</ul>
+  </div>
+
+  <div slot="verdict"><p>{review.verdict}</p></div>
+
+  <div slot="pros"><ul>{review.pros.map((point) => <li>{point}</li>)}</ul></div>
+  <div slot="cons"><ul>{review.considerations.map((point) => <li>{point}</li>)}</ul></div>
+
+  <div slot="ingredients">
+    <p>{review.ingredientsIntro}</p>
+    <ul>{review.ingredients.map((ingredient) => <li><strong>{ingredient.name}:</strong> {ingredient.detail}</li>)}</ul>
+    {product.labelImage && <figure class="review-label"><Image src={product.labelImage} alt={`${product.name} supplement facts label supplied with the product assets`} width={690} /><figcaption>Product label supplied with the source materials. Check the bottle received for the current formula.</figcaption></figure>}
+  </div>
+
+  <div slot="how-it-works">
+    <p>{review.mechanism}</p>
+    <h3>How to take it</h3><p>{review.directions}</p>
+  </div>
+
+  <div slot="who-its-for">
+    <p>{review.audience}</p>
+    <h3>What the seller says it supports</h3>
+    <ul>{review.claimedBenefits.map((benefit) => <li>{benefit}</li>)}</ul>
+  </div>
+
+  <div slot="pricing">
+    <p>These are the package totals displayed by the seller when checked on September 30, 2026. Prices, stock and shipping may change before checkout.</p>
+    <div class="review-kit-grid">
+      {product.offers.map((offer) => <article class="review-kit">
+        <Image src={offer.image} alt={`${offer.bottles} ${product.name} ${packageUnit}${offer.bottles === 1 ? '' : 's'}`} width={170} loading="lazy" />
+        <h3>{offer.bottles} {packageUnit}{offer.bottles === 1 ? '' : 's'}</h3>
+        <p><strong>{money(offer.totalPrice)} total</strong><br />{money(offer.totalPrice / offer.bottles)} per bottle</p>
+      </article>)}
+    </div>
+    <p>{review.pricingNote}</p>
+    <AffiliateCTA productId={product.id} linkArea="review_pricing" id={`aff-${product.slug}-pricing`} label="Compare current packages" variant="secondary" />
+  </div>
+
+  <div slot="guarantees"><p>{review.guaranteeNote}</p></div>
+  {review.manufacturerNote && <div slot="manufacturer"><p>{review.manufacturerNote}</p></div>}
+  <div slot="buying-options"><p>{review.buyingNote}</p></div>
+  <div slot="safety"><p>{review.safetyNote}</p></div>
+
+  <div slot="faq">
+    {review.faq.map((item) => <section class="review-faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+  </div>
+
+  <div slot="conclusion"><p>{review.conclusion}</p></div>
+  <div slot="affiliate-cta">
+    <p>Ready to compare the seller's current offer with the details above?</p>
+    <AffiliateCTA productId={product.id} linkArea="review_conclusion" id={`aff-${product.slug}-conclusion`} label="Visit the official offer" />
+    <p class="review-disclosure">Affiliate link. A purchase may earn Nutra Lens a commission at no additional cost from us.</p>
+  </div>
+  <div slot="references">
+    <p>Seller information and policies reviewed September 30, 2026. These sources describe the seller's claims and terms; they do not independently establish product efficacy.</p>
+    <ul>{review.sources.map((source) => <li><a href={source.url} rel="noopener noreferrer" target="_blank">{source.label}</a></li>)}</ul>
+    <p>See also our <a href="/how-we-review/">review method</a> and <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
+  </div>
+</ReviewLayout>

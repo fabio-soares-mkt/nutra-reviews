@@ -1,0 +1,12 @@
+---
+import ProductReview from '../components/ProductReview.astro';
+import { reviews } from '../data/reviews';
+import type { ReviewContent } from '../data/review-types';
+
+export function getStaticPaths() {
+  return reviews.map((review) => ({ params: { slug: review.productId }, props: { review } }));
+}
+interface Props { review: ReviewContent }
+const { review } = Astro.props;
+---
+<ProductReview review={review} />

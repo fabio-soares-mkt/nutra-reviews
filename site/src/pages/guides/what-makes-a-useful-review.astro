@@ -1,8 +1,8 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
-import { guides } from '../../data/content';
+import { guides, reviewItems } from '../../data/content';
 ---
-<ArticleLayout title="What makes a useful supplement review?" description="The questions we think a review should answer before it reaches a verdict." category="Research" categoryHref="/research/" date="2026-09-28" related={[guides[0]]}>
+<ArticleLayout title="What makes a useful supplement review?" description="The questions we think a review should answer before it reaches a verdict." category="Research" categoryHref="/research/" date="2026-09-28" related={[guides[0], ...reviewItems.slice(0, 2)]}>
   <div slot="contents" class="contents-list"><a href="#define-the-product">Define the product</a><a href="#separate-claims">Separate claims and support</a><a href="#compare-practical-details">Compare practical details</a><a href="#show-the-limits">Show the limits</a></div>
   <p>A review should make a product easier to understand. That means showing what was examined, which questions remain open, and how a conclusion follows from the available information.</p>
   <h2 id="define-the-product">Define the product</h2>

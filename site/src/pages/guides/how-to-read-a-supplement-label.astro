@@ -1,8 +1,8 @@
 ---
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
-import { guides } from '../../data/content';
+import { guides, reviewItems } from '../../data/content';
 ---
-<ArticleLayout title="How to read a supplement label" description="A practical starting point for serving sizes, ingredient lists, amounts, and the claims around them." category="Supplements" categoryHref="/categories/supplements/" date="2026-09-28" related={[guides[1]]}>
+<ArticleLayout title="How to read a supplement label" description="A practical starting point for serving sizes, ingredient lists, amounts, and the claims around them." category="Supplements" categoryHref="/categories/supplements/" date="2026-09-28" related={[guides[1], ...reviewItems.filter((item) => item.category === 'Supplements')]}>
   <div slot="contents" class="contents-list"><a href="#start-with-serving">Start with the serving</a><a href="#read-the-ingredients">Read the ingredients</a><a href="#look-at-claims">Look at the claims</a><a href="#keep-the-context">Keep the context</a></div>
   <p>A supplement label can tell you a great deal about a product, but only if you read its parts together. The front of the package usually highlights a benefit. The useful details are often in the supplement facts panel, ingredient list, directions, and warnings.</p>
   <h2 id="start-with-serving">Start with the serving</h2>

@@ -1,0 +1,25 @@
+export type ReviewContent = Readonly<{
+  productId: string;
+  title: string;
+  description: string;
+  lede: string;
+  snapshot: readonly string[];
+  whatItIs: string;
+  verdict: string;
+  claimedBenefits: readonly string[];
+  ingredientsIntro: string;
+  ingredients: readonly { name: string; detail: string }[];
+  mechanism: string;
+  directions: string;
+  audience: string;
+  pros: readonly string[];
+  considerations: readonly string[];
+  pricingNote: string;
+  guaranteeNote: string;
+  manufacturerNote?: string;
+  buyingNote: string;
+  safetyNote: string;
+  faq: readonly { question: string; answer: string }[];
+  conclusion: string;
+  sources: readonly { label: string; url: string }[];
+}>;

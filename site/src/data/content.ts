@@ -1,3 +1,5 @@
+import { reviewItems } from './reviews';
+
 export type EditorialItem = {
   title: string;
   description: string;
@@ -83,6 +85,8 @@ export const guides: EditorialItem[] = [
   },
 ];
 
+export { reviewItems };
+
 export const primaryNav = [
   ...categories.map(({ slug, title }) => ({ label: title, href: `/categories/${slug}/` })),
   { label: 'Research', href: '/research/' },
@@ -93,6 +97,7 @@ export const allRoutes = [
   ...categories.map(({ slug }) => `/categories/${slug}/`),
   '/research/',
   ...guides.map(({ href }) => href),
+  ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
   '/editorial-policy/',

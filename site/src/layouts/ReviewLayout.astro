@@ -1,5 +1,6 @@
 ---
 import ArticleLayout from './ArticleLayout.astro';
+import type { EditorialItem } from '../data/content';
 
 interface Props {
   title: string;
@@ -9,6 +10,7 @@ interface Props {
   author?: string;
   date?: string;
   heroImage?: { src: string; alt: string };
+  related?: EditorialItem[];
 }
 const props = Astro.props;
 const sections = [
@@ -19,7 +21,7 @@ const sections = [
   ['ingredients', 'Ingredients & composition'],
   ['how-it-works', 'How it works'],
   ['who-its-for', 'Who it may be for'],
-  ['pricing', 'Pricing'],
+  ['pricing', 'Kits & pricing'],
   ['guarantees', 'Guarantees'],
   ['manufacturer', 'Manufacturer'],
   ['buying-options', 'Buying options'],
@@ -41,7 +43,7 @@ const sections = [
   {Astro.slots.has('ingredients') && <section class="review-section" id="ingredients"><h2>Ingredients & composition</h2><slot name="ingredients" /></section>}
   {Astro.slots.has('how-it-works') && <section class="review-section" id="how-it-works"><h2>How it works</h2><slot name="how-it-works" /></section>}
   {Astro.slots.has('who-its-for') && <section class="review-section" id="who-its-for"><h2>Who it may be for</h2><slot name="who-its-for" /></section>}
-  {Astro.slots.has('pricing') && <section class="review-section" id="pricing"><h2>Pricing</h2><slot name="pricing" /></section>}
+  {Astro.slots.has('pricing') && <section class="review-section" id="pricing"><h2>Kits & pricing</h2><slot name="pricing" /></section>}
   {Astro.slots.has('guarantees') && <section class="review-section" id="guarantees"><h2>Guarantees</h2><slot name="guarantees" /></section>}
   {Astro.slots.has('manufacturer') && <section class="review-section" id="manufacturer"><h2>Manufacturer</h2><slot name="manufacturer" /></section>}
   {Astro.slots.has('buying-options') && <section class="review-section" id="buying-options"><h2>Buying options</h2><slot name="buying-options" /></section>}

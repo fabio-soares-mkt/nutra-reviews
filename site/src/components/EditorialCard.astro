@@ -9,6 +9,6 @@ const { item, featured = false } = Astro.props;
     <div class="editorial-card__meta"><span>{item.label}</span><span>·</span><span>{item.category}</span></div>
     <h3><a href={item.href}>{item.title}</a></h3>
     <p>{item.description}</p>
-    <a class="text-link" href={item.href}>Read guide <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href={item.href}>{item.label === 'Review' ? 'Read review' : 'Read guide'} <span aria-hidden="true">↗</span></a>
   </div>
 </article>
