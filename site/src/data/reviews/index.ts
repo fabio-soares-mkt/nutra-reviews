@@ -17,5 +17,6 @@ export const reviewItems: EditorialItem[] = reviews.map((review) => {
     href: `/${product.slug}-review/`,
     label: 'Review',
     category: product.category,
+    image: product.image,
   };
 });

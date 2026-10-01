@@ -1,9 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { guides, reviewItems } from '../../data/content';
 ---
 <ArticleLayout title="How to read a supplement label" description="A practical starting point for serving sizes, ingredient lists, amounts, and the claims around them." category="Supplements" categoryHref="/categories/supplements/" date="2026-09-28" related={[guides[1], ...reviewItems.filter((item) => item.category === 'Supplements')]}>
   <div slot="contents" class="contents-list"><a href="#start-with-serving">Start with the serving</a><a href="#read-the-ingredients">Read the ingredients</a><a href="#look-at-claims">Look at the claims</a><a href="#keep-the-context">Keep the context</a></div>
+  {guides[0].image && <Image src={guides[0].image.src} alt={guides[0].image.alt} class="guide-photo" width={690} loading="eager" fetchpriority="high" />}
   <p>A supplement label can tell you a great deal about a product, but only if you read its parts together. The front of the package usually highlights a benefit. The useful details are often in the supplement facts panel, ingredient list, directions, and warnings.</p>
   <h2 id="start-with-serving">Start with the serving</h2>
   <p>Find the serving size and the number of servings per container first. Amounts in the facts panel typically refer to that serving, not necessarily to one capsule, scoop, or bottle. Check the directions to understand how the suggested use relates to the listed amounts.</p>
@@ -17,3 +19,6 @@ import { guides, reviewItems } from '../../data/content';
   <p>Read directions, warnings, storage information, and manufacturer details before drawing conclusions. Consider whether the product suits your circumstances, and speak with a qualified health professional about personal health questions, especially if you take medication or manage a condition.</p>
   <p>Good comparison starts with complete information. If a label leaves important details unclear, that uncertainty belongs in the decision.</p>
 </ArticleLayout>
+<style>
+  .guide-photo { display: block; width: 100%; max-height: 360px; object-fit: cover; margin: 0 0 1.5rem; }
+</style>

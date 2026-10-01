@@ -3,11 +3,11 @@ import prodentimImage from '../assets/products/prodentim/prodentim-logo.png';
 import prodentim2 from '../assets/products/prodentim/prod_2_bottle.png';
 import prodentim3 from '../assets/products/prodentim/prodentim3-bottle.png';
 import prodentim6 from '../assets/products/prodentim/fe_6_bottle.png';
-import phytomemoneImage from '../assets/products/phytomemone/phytomemone-logo.png';
+import phytomemoneImage from '../assets/products/phytomemone/phytomemone-hero.jpg';
 import phytomemone2 from '../assets/products/phytomemone/phytomemone-2-Bottles.png';
 import phytomemone3 from '../assets/products/phytomemone/phytomemone-3-bottles.png';
 import phytomemone6 from '../assets/products/phytomemone/phytomemone-6-bottles.png';
-import audifortImage from '../assets/products/audifort/bottle-label.webp';
+import audifortImage from '../assets/products/audifort/audifort-hero.jpg';
 import audifort2 from '../assets/products/audifort/PRODx2-500px.webp';
 import audifort3 from '../assets/products/audifort/PRODx3-500px.webp';
 import audifort6 from '../assets/products/audifort/PRODx6-500px.webp';
@@ -15,11 +15,11 @@ import prostaviveImage from '../assets/products/prostavive/bottles.png';
 import prostavive1 from '../assets/products/prostavive/1-bottle.jpg';
 import prostavive3 from '../assets/products/prostavive/3-bottles.jpg';
 import prostavive6 from '../assets/products/prostavive/6-bottles.jpg';
-import jointgenesisImage from '../assets/products/jointgenesis/bottle-ing.png';
+import jointgenesisImage from '../assets/products/jointgenesis/jointgenesis-hero.jpg';
 import jointgenesis2 from '../assets/products/jointgenesis/2-pack.png';
 import jointgenesis3 from '../assets/products/jointgenesis/3-pack.png';
 import jointgenesis6 from '../assets/products/jointgenesis/6-pack.png';
-import gluco6Image from '../assets/products/gluco6/690ae57520deee2abad2f7f7_g6bottle-ing-p-800.webp';
+import gluco6Image from '../assets/products/gluco6/gluco6-hero.webp';
 import gluco62 from '../assets/products/gluco6/690afe9437856b0f2ebfe1fd_2-pack.webp';
 import gluco63 from '../assets/products/gluco6/690afe94507d009ee19f9f31_3-pack.webp';
 import gluco66 from '../assets/products/gluco6/690afa152d64b64c03dc95ef_g6-6pack-p-500.webp';
@@ -73,7 +73,7 @@ export const products: readonly Product[] = [
     id: 'phytomemone', slug: 'phytomemone', name: 'Phytomem One', category: 'Brain & Focus',
     officialUrl: 'https://getphytomemone.com/welcome/', originalHopLink: 'https://3f714dwkoeokdp5cnj6b00vw62.hop.clickbank.net',
     affiliateUrl: hop('https://3f714dwkoeokdp5cnj6b00vw62.hop.clickbank.net', 'phytomemone'), affiliateNetwork: 'clickbank',
-    image: { src: phytomemoneImage, alt: 'Phytomem One dietary supplement bottle with botanical artwork' },
+    image: { src: phytomemoneImage, alt: 'Phytomem One supplement bottle with orange brain symbol' },
     offers: [{ bottles: 2, totalPrice: 158, currency: 'USD', image: phytomemone2 }, { bottles: 3, totalPrice: 177, currency: 'USD', image: phytomemone3 }, { bottles: 6, totalPrice: 294, currency: 'USD', image: phytomemone6 }],
     guarantee: '60 days from delivery; return all purchased items in good condition. Original and return shipping are excluded.',
     status: 'published',
@@ -109,7 +109,7 @@ export const products: readonly Product[] = [
     id: 'gluco6', slug: 'gluco6', name: 'Gluco6', category: 'Weight & Metabolism',
     officialUrl: 'https://gluco6.com/', originalHopLink: 'https://7ab8f02fhcmn1k7bphjkcm8x51.hop.clickbank.net',
     affiliateUrl: hop('https://7ab8f02fhcmn1k7bphjkcm8x51.hop.clickbank.net', 'gluco6'), affiliateNetwork: 'clickbank',
-    image: { src: gluco6Image, alt: 'Gluco6 supplement bottle with botanical artwork' }, labelImage: gluco6Label,
+    image: { src: gluco6Image, alt: 'Gluco6 supplement bottle with green geometric label' }, labelImage: gluco6Label,
     offers: [{ bottles: 2, totalPrice: 138, currency: 'USD', image: gluco62 }, { bottles: 3, totalPrice: 147, currency: 'USD', image: gluco63 }, { bottles: 6, totalPrice: 234, currency: 'USD', image: gluco66 }],
     guarantee: '60 days; contact support and return all bottles with labels, including opened bottles, at your shipping expense.',
     status: 'published',

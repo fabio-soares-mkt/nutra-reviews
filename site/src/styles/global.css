@@ -122,6 +122,7 @@ p{line-height:1.7}
 .article-body h2,.article-references h2{font-family:var(--serif);font-size:2rem;font-weight:400;line-height:1.2;margin:2.4rem 0 .8rem;scroll-margin-top:1rem}
 .article-body h3{font-family:var(--serif);font-size:1.4rem;font-weight:400;margin:1.8rem 0 .5rem}
 .article-body p{margin-bottom:1.3rem}.article-body ul,.article-body ol{padding-left:1.4rem}.article-body li{margin-bottom:.5rem}.article-body a,.article-references a{color:var(--cta);text-decoration:underline;text-underline-offset:3px}
+.article-body a.button{color:var(--white);text-decoration:none}.article-body a.button--light{color:var(--cta)}
 .article-aside{position:sticky;top:1.5rem;border-left:1px solid var(--line);padding-left:1.3rem}
 .article-aside h2{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;font-weight:800;margin:0 0 1rem}
 .contents-list{display:grid;gap:.8rem;font-size:.78rem;color:var(--muted)}.contents-list a:hover{color:var(--cta)}

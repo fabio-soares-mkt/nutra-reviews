@@ -1,10 +1,18 @@
 ---
+import { Image } from 'astro:assets';
 import type { Category } from '../data/content';
 interface Props { category: Category; index?: number }
 const { category, index } = Astro.props;
 ---
 <a class:list={['category-card', `category-card--${category.accent}`]} href={`/categories/${category.slug}/`}>
   <span class="category-card__top"><span class="eyebrow">{category.eyebrow}</span><span aria-hidden="true">{String((index ?? 0) + 1).padStart(2, '0')}</span></span>
+  {category.image && <span class="category-card__media"><Image src={category.image.src} alt={category.image.alt} loading="lazy" decoding="async" /></span>}
   <span class="category-card__body"><strong>{category.title}</strong><span>{category.description}</span></span>
   <span class="category-card__link">Explore category <span aria-hidden="true">↗</span></span>
 </a>
+<style>
+  .category-card__media { display: block; overflow: hidden; height: 96px; margin-top: .8rem; }
+  .category-card__media :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .category-card__media + .category-card__body { padding-top: .8rem; }
+  @media (max-width: 600px) { .category-card__media { height: 76px; margin-top: .65rem; } }
+</style>

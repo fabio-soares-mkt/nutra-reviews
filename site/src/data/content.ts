@@ -1,4 +1,11 @@
+import type { ImageMetadata } from 'astro';
 import { reviewItems } from './reviews';
+import supplementsImage from '../assets/editorial/supplements.jpg';
+import weightMetabolismImage from '../assets/editorial/weight-metabolism.jpg';
+import sleepRecoveryImage from '../assets/editorial/sleep-recovery.jpg';
+import brainFocusImage from '../assets/editorial/brain-focus.jpg';
+import supplementLabelImage from '../assets/editorial/guide-supplement-label.jpg';
+import usefulReviewImage from '../assets/editorial/guide-useful-review.jpg';
 
 export type EditorialItem = {
   title: string;
@@ -6,6 +13,7 @@ export type EditorialItem = {
   href: string;
   label: string;
   category: string;
+  image?: { src: ImageMetadata; alt: string };
 };
 
 export type Category = {
@@ -15,6 +23,7 @@ export type Category = {
   description: string;
   focus: string[];
   accent: string;
+  image?: { src: ImageMetadata; alt: string };
 };
 
 export const categories: Category[] = [
@@ -25,6 +34,7 @@ export const categories: Category[] = [
     description: 'A clearer way to explore supplement labels, ingredients, evidence, and the questions worth asking before you buy.',
     focus: ['Ingredients', 'Labels', 'Evidence'],
     accent: 'sage',
+    image: { src: supplementsImage, alt: 'Supplement bottles and capsules beside a comparison chart' },
   },
   {
     slug: 'weight-metabolism',
@@ -33,6 +43,7 @@ export const categories: Category[] = [
     description: 'Context for a category often crowded with bold promises. We look at claims, trade-offs, and what product information can actually tell you.',
     focus: ['Claims', 'Formulas', 'Context'],
     accent: 'clay',
+    image: { src: weightMetabolismImage, alt: 'Breakfast bowl, fruit, water and a measuring tape on a table' },
   },
   {
     slug: 'sleep-recovery',
@@ -41,6 +52,7 @@ export const categories: Category[] = [
     description: 'An editorial home for sleep and recovery products, with attention to ingredients, practical use, and the limits of available evidence.',
     focus: ['Sleep', 'Recovery', 'Routines'],
     accent: 'blue',
+    image: { src: sleepRecoveryImage, alt: 'Bedside table and a softly lit bedroom at night' },
   },
   {
     slug: 'brain-focus',
@@ -49,6 +61,7 @@ export const categories: Category[] = [
     description: 'A measured look at products marketed for focus and cognition, starting with transparent labels and well-framed evidence.',
     focus: ['Focus', 'Cognition', 'Evidence'],
     accent: 'lavender',
+    image: { src: brainFocusImage, alt: 'Notebook, laptop and supplement bottle on a study desk' },
   },
   {
     slug: 'gut-health',
@@ -75,6 +88,7 @@ export const guides: EditorialItem[] = [
     href: '/guides/how-to-read-a-supplement-label/',
     label: 'Guide',
     category: 'Supplements',
+    image: { src: supplementLabelImage, alt: 'Person reading the label on a supplement bottle' },
   },
   {
     title: 'What makes a useful supplement review?',
@@ -82,6 +96,7 @@ export const guides: EditorialItem[] = [
     href: '/guides/what-makes-a-useful-review/',
     label: 'Editorial guide',
     category: 'Research',
+    image: { src: usefulReviewImage, alt: 'Person comparing a supplement bottle with notes and a laptop' },
   },
 ];
 
