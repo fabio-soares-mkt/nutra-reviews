@@ -4,6 +4,8 @@ import supplementsImage from '../assets/editorial/supplements.jpg';
 import weightMetabolismImage from '../assets/editorial/weight-metabolism.jpg';
 import sleepRecoveryImage from '../assets/editorial/sleep-recovery.jpg';
 import brainFocusImage from '../assets/editorial/brain-focus.jpg';
+import gutHealthImage from '../assets/editorial/gut-health.jpg';
+import wellnessImage from '../assets/editorial/wellness.jpg';
 import supplementLabelImage from '../assets/editorial/guide-supplement-label.jpg';
 import usefulReviewImage from '../assets/editorial/guide-useful-review.jpg';
 
@@ -70,6 +72,7 @@ export const categories: Category[] = [
     description: 'Guides to understanding gut health products, their ingredients, and the details that make comparisons useful.',
     focus: ['Probiotics', 'Fiber', 'Labels'],
     accent: 'peach',
+    image: { src: gutHealthImage, alt: 'Supplement bottle, yogurt, berries and oats on a kitchen counter' },
   },
   {
     slug: 'wellness',
@@ -78,6 +81,7 @@ export const categories: Category[] = [
     description: 'A broad editorial space for wellness products and habits, approached with curiosity, context, and a healthy respect for uncertainty.',
     focus: ['Daily life', 'Products', 'Perspective'],
     accent: 'mint',
+    image: { src: wellnessImage, alt: 'Supplement bottle, glass of water and notebook on a sunlit table' },
   },
 ];
 

@@ -1,5 +1,5 @@
 import type { ImageMetadata } from 'astro';
-import prodentimImage from '../assets/products/prodentim/prodentim-logo.png';
+import prodentimImage from '../assets/products/prodentim/prodentim-hero.jpg';
 import prodentim2 from '../assets/products/prodentim/prod_2_bottle.png';
 import prodentim3 from '../assets/products/prodentim/prodentim3-bottle.png';
 import prodentim6 from '../assets/products/prodentim/fe_6_bottle.png';
@@ -11,7 +11,7 @@ import audifortImage from '../assets/products/audifort/audifort-hero.jpg';
 import audifort2 from '../assets/products/audifort/PRODx2-500px.webp';
 import audifort3 from '../assets/products/audifort/PRODx3-500px.webp';
 import audifort6 from '../assets/products/audifort/PRODx6-500px.webp';
-import prostaviveImage from '../assets/products/prostavive/bottles.png';
+import prostaviveImage from '../assets/products/prostavive/prostavive-hero.jpg';
 import prostavive1 from '../assets/products/prostavive/1-bottle.jpg';
 import prostavive3 from '../assets/products/prostavive/3-bottles.jpg';
 import prostavive6 from '../assets/products/prostavive/6-bottles.jpg';
@@ -64,7 +64,7 @@ export const products: readonly Product[] = [
     id: 'prodentim', slug: 'prodentim', name: 'ProDentim', category: 'Supplements',
     officialUrl: 'https://prodentim101.com/text.php', originalHopLink: 'https://ccf3903lrgvy6k4mzdqdums86o.hop.clickbank.net',
     affiliateUrl: hop('https://ccf3903lrgvy6k4mzdqdums86o.hop.clickbank.net', 'prodentim'), affiliateNetwork: 'clickbank',
-    image: { src: prodentimImage, alt: 'ProDentim oral probiotic tablet bottle with strawberry and mint artwork' },
+    image: { src: prodentimImage, alt: 'Two ProDentim oral probiotic tablet bottles with strawberry artwork' },
     offers: [{ bottles: 2, totalPrice: 158, currency: 'USD', image: prodentim2 }, { bottles: 3, totalPrice: 207, currency: 'USD', image: prodentim3 }, { bottles: 6, totalPrice: 294, currency: 'USD', image: prodentim6 }],
     guarantee: '60 days from delivery; request a refund and return every bottle, including opened or empty bottles, at your shipping expense.',
     status: 'published',
@@ -91,7 +91,7 @@ export const products: readonly Product[] = [
     id: 'prostavive', slug: 'prostavive', name: 'ProstaVive', category: 'Wellness',
     officialUrl: 'https://prostavive.org/', originalHopLink: 'https://0a3018xgqqmu3u7iwkx612bp89.hop.clickbank.net',
     affiliateUrl: hop('https://0a3018xgqqmu3u7iwkx612bp89.hop.clickbank.net', 'prostavive'), affiliateNetwork: 'clickbank',
-    image: { src: prostaviveImage, alt: 'Three tubs of ProstaVive powdered supplement' },
+    image: { src: prostaviveImage, alt: 'ProstaVive powdered supplement tub' },
     offers: [{ bottles: 1, totalPrice: 79, currency: 'USD', image: prostavive1 }, { bottles: 3, totalPrice: 177, currency: 'USD', image: prostavive3 }, { bottles: 6, totalPrice: 234, currency: 'USD', image: prostavive6 }],
     guarantee: '180 days from order; request authorization and return all bottles, including opened and empty ones, at your shipping expense.',
     status: 'published',
