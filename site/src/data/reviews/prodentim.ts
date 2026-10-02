@@ -3,53 +3,53 @@ import type { ReviewContent } from '../review-types';
 export const review: ReviewContent = {
   productId: 'prodentim',
   title: 'ProDentim Review: Ingredients, Price & Returns',
-  description: 'An evidence-conscious look at ProDentim’s oral probiotic formula, daily use, bundle offers, shipping, and the conditions behind its refund promise.',
-  lede: 'ProDentim is a daily oral probiotic tablet marketed for teeth and gum support. Its three named bacterial strains are useful to know, but claims about dental outcomes are marketing, not proof that the finished product treats a condition. Buyers should check the label, full bundle cost, and refund requirements.',
+  description: 'A practical look at ProDentim’s oral probiotic formula, daily use, bundle prices, shipping, and refund terms.',
+  lede: 'ProDentim is a daily oral probiotic tablet presented for teeth and gum support. Three named bacterial strains make the formula easier to examine. Before ordering, check the label, the full bundle cost, and the all-bottles return rule. Treat it as a supplement to regular dental care, not a treatment for dental disease.',
   snapshot: [
-    'Format: a soft oral tablet; the seller recommends one each morning.',
+    'Format: a soft oral tablet taken once each morning.',
     'Disclosed blend: 3.5 billion probiotic organisms across three named strains, plus four other named ingredients.',
-    'Offers: two, three, and six bottles; verify the final total and shipping at checkout.',
+    'Offers: two, three, and six bottles; check the final total and shipping at checkout.',
     'Returns: request within 60 days of delivery and send back every bottle, including opened or empty bottles.'
   ],
-  whatItIs: 'The brand presents ProDentim as a supplement intended to add beneficial oral bacteria. The page does not establish that ProDentim itself can repair teeth or treat gum disease. It belongs alongside brushing, flossing, and dental care.',
+  whatItIs: 'ProDentim is an oral probiotic supplement intended to add selected bacteria to the mouth. It fits alongside brushing, flossing, and dental care. Tooth repair and gum-disease treatment require dental care; those are not established uses of this tablet.',
   claimedBenefits: [
-    'The seller says the blend supports gum and tooth health and a balanced oral microbiome.',
-    'The page also promotes fresher breath and a healthy mouth environment; individual results are not established by the offer page.',
-    'Other references to sinuses, immunity, sleep, or digestion are seller claims and should not drive a dental-product decision.'
+    'The product is presented for gum and tooth support and a balanced oral microbiome.',
+    'Fresher breath and a healthy mouth environment are also promoted benefits, not guaranteed individual outcomes.',
+    'The materials also mention sinuses, immunity, sleep, and digestion. These broader claims are less useful when deciding whether to buy an oral-care supplement.'
   ],
-  ingredientsIntro: 'The offer says the tablet contains 3.5 billion probiotic organisms in total, without a readable per-strain breakdown in the main text. The listed ingredients do not establish a benefit at this formula’s dose.',
+  ingredientsIntro: 'The disclosed blend contains 3.5 billion probiotic organisms in total. The main text does not break that figure down by strain, so the label matters when comparing formulas. An ingredient’s role also depends on its dose and the finished formulation.',
   ingredients: [
-    { name: 'Lactobacillus paracasei', detail: 'One of the three named bacteria; the brand associates it with gum support.' },
-    { name: 'B. lactis BL-04', detail: 'A named Bifidobacterium strain promoted for oral microbial balance.' },
-    { name: 'Lactobacillus reuteri', detail: 'The third named strain, described by the seller as supporting a healthy mouth environment.' },
-    { name: 'Inulin, malic acid, tricalcium phosphate, and peppermint', detail: 'Four additional ingredients disclosed on the sales page. Individual quantities and their contribution in this formula need label confirmation.' }
+    { name: 'Lactobacillus paracasei', detail: 'One of the three named bacteria, included in the gum-support proposal.' },
+    { name: 'B. lactis BL-04', detail: 'A named Bifidobacterium strain included for oral microbial balance.' },
+    { name: 'Lactobacillus reuteri', detail: 'The third named strain, included in the healthy-mouth proposal.' },
+    { name: 'Inulin, malic acid, tricalcium phosphate, and peppermint', detail: 'Four additional disclosed ingredients. Check the label for individual quantities and their role in the full formula.' }
   ],
-  mechanism: 'The seller proposes adding selected bacteria to the mouth. General oral-microbiome research does not show that this tablet reverses gum disease, rebuilds teeth, or replaces dental treatment.',
-  directions: 'The sales FAQ says to chew one tablet slowly each morning. Another official FAQ says to let a soft tablet dissolve. Follow the current package directions or ask the seller to clarify.',
-  audience: 'It may suit adults seeking an optional addition to regular oral care. Persistent gum bleeding, tooth pain, or other symptoms call for a dentist’s evaluation.',
+  mechanism: 'The formula is designed to introduce selected bacteria into the mouth as part of a daily oral-care routine. Research on the oral microbiome should be considered separately from results for this finished tablet. Gum disease and tooth damage still call for dental assessment and treatment.',
+  directions: 'One official FAQ says to chew one tablet slowly each morning; another says to let the soft tablet dissolve. Follow the current package directions or seek clarification before use.',
+  audience: 'ProDentim is designed as an optional addition to regular oral care for adults seeking an oral probiotic. Persistent gum bleeding, tooth pain, or other symptoms call for a dentist’s evaluation.',
   pros: [
-    'The seller identifies the three probiotic strains rather than describing only a generic blend.',
-    'Several bundle sizes are offered, and the larger packages advertise extra digital bonuses.',
+    'The three probiotic strains are named rather than described only as a generic blend.',
+    'Several bundle sizes are available, with extra digital bonuses advertised for larger packages.',
     'A written refund policy explains the return procedure and the start of the 60-day period.'
   ],
   considerations: [
-    'The page does not make each ingredient’s quantity clear in accessible text; inspect the product label before comparing formulations.',
-    'Claims about transformed teeth or gums and broad whole-body benefits exceed what the product page proves.',
-    'The sales offer and separate shipping policy disagree about whether a two-bottle US order incurs a shipping fee.'
+    'Individual ingredient quantities are not clear in the main text; inspect the product label before comparing formulations.',
+    'The promoted tooth, gum, and broader body benefits should be distinguished from established outcomes for the finished product.',
+    'The offer adds shipping to a two-bottle order, while the separate policy describes free US shipping. Check the charge at checkout.'
   ],
-  verdict: 'The named strains make ProDentim easier to assess, but its dental claims remain unproven for the finished tablet. Consider it only as an optional supplement after checking the label, checkout, and return requirements.',
-  pricingNote: 'Two-, three-, and six-bottle packages are shown. The offer adds shipping to two bottles but advertises free shipping for larger bundles; a separate policy says US shipping is free without that qualification. Confirm the final checkout total.',
+  verdict: 'Three named probiotic strains and a simple daily format make ProDentim straightforward to compare with other oral supplements. Its role is complementary to dental care; check the label, final checkout charge, and all-bottles return rule before deciding.',
+  pricingNote: 'Two-, three-, and six-bottle packages are available. The offer adds shipping to two bottles and advertises free shipping for larger bundles, while a separate policy says US shipping is free without that qualification. Confirm the final checkout total.',
   guaranteeNote: 'The 60-day window begins on delivery. Contact support and return all bottles, including empty ones, with the packing slip; the buyer pays return postage. The policy’s advice to try the product for three months conflicts with that window, so do not delay a refund request.',
   manufacturerNote: 'The reviewed material does not clearly identify a legal manufacturer. ClickBank is the retailer, not an endorser. A facility-related FDA claim does not mean FDA approval of this supplement.',
-  buyingNote: 'Inspect the current bottle count, full charge, delivery terms, and refund policy on the official offer before payment. Keep the order and delivery records.',
+  buyingNote: 'Before payment, check the bottle count, full charge, delivery terms, and refund policy. Keep the order and delivery records.',
   safetyNote: 'The site says FDA has not evaluated its claims and the product is not a disease treatment. It advises physician consultation for pregnancy, nursing, medication, or medical conditions. Ask a dentist about persistent symptoms.',
   faq: [
-    { question: 'How many ProDentim tablets does the seller recommend?', answer: 'One each morning. Official pages differ on chewing slowly versus letting the tablet dissolve, so check the bottle directions.' },
+    { question: 'How many ProDentim tablets should you take?', answer: 'The daily direction is one each morning. Official pages differ on chewing slowly versus letting the tablet dissolve, so check the bottle directions.' },
     { question: 'Are ProDentim purchases subscriptions?', answer: 'The official contact FAQ describes the order as a one-time payment, with no recurring shipments or charges.' },
     { question: 'When does the money-back period begin?', answer: 'The linked refund policy says 60 days from delivery and requires the return of every bottle at the buyer’s return-shipping expense.' },
-    { question: 'Will ProDentim treat gum disease?', answer: 'The seller promotes oral-health support, but the reviewed pages do not establish treatment efficacy for the finished product. Ask a dentist about symptoms or diagnosed disease.' }
+    { question: 'Will ProDentim treat gum disease?', answer: 'ProDentim is presented for oral-health support, not as a gum-disease treatment. Ask a dentist about symptoms or diagnosed disease.' }
   ],
-  conclusion: 'ProDentim offers a named probiotic blend and a simple daily routine. Its benefit claims require stronger product-level evidence. Check the bottle label, live total, shipping discrepancy, and all-bottles return rule before buying.',
+  conclusion: 'ProDentim combines three named probiotic strains in a once-daily oral tablet. It is intended to complement brushing, flossing, and dental care; its promoted outcomes should be weighed separately from established results for the finished product. Check the bottle label, live checkout total, shipping discrepancy, and all-bottles return rule before buying.',
   sources: [
     { label: 'Official ProDentim offer and FAQs', url: 'https://prodentim101.com/text.php' },
     { label: 'Official ProDentim refund policy', url: 'https://prodentim101.com/help/refunds.php' },

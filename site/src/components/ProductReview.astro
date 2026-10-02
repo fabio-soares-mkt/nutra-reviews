@@ -62,17 +62,17 @@ const packageUnit = product.id === 'prostavive' ? 'tub' : 'bottle';
 
   <div slot="who-its-for">
     <p>{review.audience}</p>
-    <h3>What the seller says it supports</h3>
+    <h3>Product focus and stated benefits</h3>
     <ul>{review.claimedBenefits.map((benefit) => <li>{benefit}</li>)}</ul>
   </div>
 
   <div slot="pricing">
-    <p>These are the package totals displayed by the seller when checked on September 30, 2026. Prices, stock and shipping may change before checkout.</p>
+    <p>Package prices checked on September 30, 2026. Prices, availability, and shipping may change before checkout.</p>
     <div class="review-kit-grid">
       {product.offers.map((offer) => <article class="review-kit">
         <Image src={offer.image} alt={`${offer.bottles} ${product.name} ${packageUnit}${offer.bottles === 1 ? '' : 's'}`} width={170} loading="lazy" />
         <h3>{offer.bottles} {packageUnit}{offer.bottles === 1 ? '' : 's'}</h3>
-        <p><strong>{money(offer.totalPrice)} total</strong><br />{money(offer.totalPrice / offer.bottles)} per bottle</p>
+        <p><strong>{money(offer.totalPrice)} total</strong><br />{money(offer.totalPrice / offer.bottles)} per {packageUnit}</p>
       </article>)}
     </div>
     <p>{review.pricingNote}</p>
@@ -90,12 +90,12 @@ const packageUnit = product.id === 'prostavive' ? 'tub' : 'bottle';
 
   <div slot="conclusion"><p>{review.conclusion}</p></div>
   <div slot="affiliate-cta">
-    <p>Ready to compare the seller's current offer with the details above?</p>
+    <p>Ready to compare current packages and terms?</p>
     <AffiliateCTA productId={product.id} linkArea="review_conclusion" id={`aff-${product.slug}-conclusion`} label="Visit the official offer" />
     <p class="review-disclosure">Affiliate link. A purchase may earn Nutra Lens a commission at no additional cost from us.</p>
   </div>
   <div slot="references">
-    <p>Seller information and policies reviewed September 30, 2026. These sources describe the seller's claims and terms; they do not independently establish product efficacy.</p>
+    <p>Product information and policies reviewed September 30, 2026. The sources below document composition, stated benefits, and buying terms; product materials are not independent clinical evidence.</p>
     <ul>{review.sources.map((source) => <li><a href={source.url} rel="noopener noreferrer" target="_blank">{source.label}</a></li>)}</ul>
     <p>See also our <a href="/how-we-review/">review method</a> and <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
   </div>

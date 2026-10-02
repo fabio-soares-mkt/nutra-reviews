@@ -3,54 +3,54 @@ import type { ReviewContent } from '../review-types';
 export const review: ReviewContent = {
   productId: 'audifort',
   title: 'Audifort Review: Drops, Prices & Return Terms',
-  description: 'An independent reading of Audifort’s disclosed ingredients, daily dropper directions, bottle bundles, shipping, and inconsistent refund policies.',
-  lede: 'Audifort is a liquid supplement marketed for hearing wellness. The offer describes more than twenty ingredients and three bundle sizes. The key buying issue is a conflict among the official pages about refund timing and eligibility. Obtain the governing terms in writing before relying on the 90-day promise.',
+  description: 'A practical review of Audifort’s ingredients, daily dropper routine, bottle prices, shipping, and conflicting return terms.',
+  lede: 'Audifort is a liquid supplement designed for a daily hearing-wellness routine. It comes in two-, three-, and six-bottle packages and is described as containing more than twenty ingredients. Before choosing a package, check the full label and get the applicable refund terms in writing: the official pages differ on deadlines and eligibility.',
   snapshot: [
     'Format: liquid drops, with one full dropper (about 15 drops) recommended each day.',
-    'The offer names six examples from a claimed formula of more than twenty ingredients.',
-    'Two, three, and six-bottle options are shown; three and six advertise free US shipping.',
-    'Refund pages conflict: the offer says 90 days, while a linked shipping policy says returns must arrive within 60 days.'
+    'Six ingredients are named in the main text of a formula described as containing more than twenty.',
+    'Two-, three-, and six-bottle packages are available; the larger two include free US shipping.',
+    'Return terms vary: the sales and return pages refer to 90 days, while the linked shipping policy requires delivery within 60 days.'
   ],
-  whatItIs: 'The seller positions Audifort as a hearing and ear-wellness supplement, also claiming energy and clarity support. The reviewed material does not establish that these drops reverse hearing loss or stop tinnitus.',
+  whatItIs: 'Audifort is a liquid dietary supplement presented for hearing and ear wellness, with additional messages about energy and clarity. It belongs in a general wellness routine, while hearing loss and tinnitus call for professional assessment.',
   claimedBenefits: [
-    'The seller says the formula supports healthy hearing and ear comfort.',
-    'It describes antioxidant, circulation, relaxation, and energy support from selected ingredients, but those ingredient-level assertions do not prove a product-level benefit.',
-    'The FAQ suggests some customers notice changes quickly and recommends months of use; no verified timeline should be inferred for an individual buyer.'
+    'The main proposed benefits are healthy hearing and ear comfort.',
+    'The presentation also connects selected ingredients with antioxidant, circulation, relaxation, and energy support. Those ingredient descriptions are distinct from evidence for the finished formula.',
+    'The FAQ mentions that some customers notice changes quickly and suggests using the drops for several months; individual results and timing remain uncertain.'
   ],
-  ingredientsIntro: 'The offer claims more than twenty ingredients but names only six in readable text. Inspect its linked label image for the full list, serving size, and amounts.',
+  ingredientsIntro: 'Audifort is described as a blend of more than twenty ingredients, but the main sales text names six. Review the linked label image for the complete list, serving size, and amounts.',
   ingredients: [
-    { name: 'Maca root', detail: 'Named by the seller in connection with energy support; the sales text does not establish its dose.' },
-    { name: 'Grape seed', detail: 'Presented as an antioxidant component, without an amount in the readable offer text.' },
-    { name: 'Green tea', detail: 'The brand associates it with circulation to the ears; this is a promotional explanation.' },
-    { name: 'Capsicum annuum', detail: 'Named in the page’s discussion of a healthy inflammatory response.' },
-    { name: 'Gymnema sylvestre and GABA', detail: 'The final two prominently named components; the page links them to hearing support and relaxation respectively.' }
+    { name: 'Maca root', detail: 'Featured in the energy-support message; check the full label for its amount.' },
+    { name: 'Grape seed', detail: 'Highlighted for its antioxidant role; the main text omits its amount.' },
+    { name: 'Green tea', detail: 'Associated with circulation to the ears in the product presentation.' },
+    { name: 'Capsicum annuum', detail: 'Included in the discussion of a healthy inflammatory response.' },
+    { name: 'Gymnema sylvestre and GABA', detail: 'Presented in connection with hearing support and relaxation, respectively.' }
   ],
-  mechanism: 'The seller combines plant compounds and GABA in a hearing-support story. Research on individual components does not establish that this blend treats a hearing disorder.',
-  directions: 'The FAQ recommends one full dropper, about 15 drops, daily under the tongue or mixed into water or natural juice. Confirm the delivered label’s instructions.',
-  audience: 'It may appeal to adults who prefer drops to capsules and can review the full label. Tinnitus, sudden hearing change, ear pain, or significant difficulty warrants professional assessment.',
+  mechanism: 'The formula combines plant compounds and GABA in a hearing-wellness approach. Evidence about individual ingredients should be considered separately from expected results with the complete blend; Audifort is not an established treatment for a hearing disorder.',
+  directions: 'Take one full dropper, about 15 drops, daily under the tongue or mixed into water or natural juice, according to the FAQ. Follow the instructions on the delivered label.',
+  audience: 'Audifort fits an adult routine built around liquid drops rather than capsules. Compare the complete label before buying; tinnitus, sudden hearing changes, ear pain, or significant difficulty deserve professional assessment.',
   pros: [
-    'The offer presents clear bottle counts and per-bottle prices for three bundle sizes.',
-    'Daily directions are specific about one dropper and how to take it.',
-    'The three- and six-bottle offers include two digital guides and advertise free US shipping.'
+    'Three packages show bottle counts and per-bottle prices.',
+    'The daily dropper amount and ways to take it are specified.',
+    'The three- and six-bottle packages include two digital guides and free US shipping.'
   ],
   considerations: [
-    'Most claimed ingredients and their amounts are not readable in the sales-page text.',
-    'The refund deadline differs across official pages, and the return policy introduces an RMA and sale-item exclusion.',
-    'Hearing and tinnitus-related marketing should not be mistaken for clinical evidence for the finished product.'
+    'The main text identifies only six of the claimed twenty-plus ingredients and omits their amounts.',
+    'Refund deadlines differ across official pages; the return policy also requires authorization and excludes sale items.',
+    'Hearing-support messages describe the product’s intended use, not established clinical results for the complete formula.'
   ],
-  verdict: 'The dropper format and prices are clear, but the full label and conflicting refund rules need clarification. Treat hearing benefits as promotional claims and request written return terms before ordering.',
-  pricingNote: 'The offer lists two bottles for $158 plus shipping, three for $207 with free US shipping, or six for $294 with free US shipping. Three and six bottles include two digital guides. Check the live checkout total.',
-  guaranteeNote: 'The sales page promises 90 days from purchase and accepts empty bottles, excluding shipping fees. The return policy requires authorization within 90 days, return shipment within 14 days afterward, and buyer-paid postage; it also excludes sale items. A linked shipping policy instead requires all bottles to arrive within 60 days of purchase. Ask which written policy governs this offer before buying.',
-  manufacturerNote: 'Andrew Ross is presented as creator; the footer names “Audifort Research.” The seller says US assembly, but a legal manufacturer is not clear. ClickBank is the retailer, not an endorser.',
-  buyingNote: 'The order page uses audisoothe.com while policies mention audifort.com. Verify seller support details and retain the offer, receipt, and written refund clarification. The FAQ says payment is one-time.',
-  safetyNote: 'The site says FDA has not evaluated its claims and the product is not a disease treatment. The readable page lacks a full interaction profile; review the label with a clinician if you take medication or have hearing symptoms.',
+  verdict: 'Audifort offers a simple dropper routine, three clearly priced packages, and free US shipping on larger bundles. The deciding checks are the complete ingredient label and the conflicting return rules; get the applicable terms in writing before ordering.',
+  pricingNote: 'At the September 30, 2026 review, two bottles cost $158 ($79 each) plus shipping, three cost $207 ($69 each) with free US shipping, and six cost $294 ($49 each) with free US shipping. The three- and six-bottle packages also include two digital guides. Prices and the final checkout total may change.',
+  guaranteeNote: 'The sales page promises 90 days from purchase, accepts empty bottles, and excludes shipping fees from refunds. The return policy requires authorization (RMA) within 90 days, shipment within 14 days after authorization, buyer-paid return postage, and excludes sale items. A linked shipping policy instead requires all bottles to arrive within 60 days of purchase. Ask for written confirmation of the terms governing your order.',
+  manufacturerNote: 'Andrew Ross is presented as the creator, the footer names “Audifort Research,” and US assembly is claimed. The legal manufacturer is unclear in the materials reviewed. ClickBank serves as retailer and does not endorse the product.',
+  buyingNote: 'The order page uses audisoothe.com, while the policies mention audifort.com. Confirm the support contact and keep the offer, receipt, and written refund clarification. The FAQ describes a one-time payment.',
+  safetyNote: 'The FDA disclaimer says the claims have not been evaluated and Audifort is not intended to treat disease. A full interaction profile is unavailable in the sales text; review the label with a clinician if you take medication or have hearing symptoms.',
   faq: [
-    { question: 'How is Audifort taken?', answer: 'The seller recommends one full dropper, about 15 drops, daily under the tongue or diluted in water or natural juice.' },
-    { question: 'What does the two-bottle package cost?', answer: 'The reviewed offer lists $158 before shipping. Confirm the current total and destination charges at checkout.' },
-    { question: 'Is the refund window 90 days?', answer: 'The sales page and return page refer to 90 days, but a linked shipping policy requires the returned package to arrive within 60 days. Seek written clarification before ordering.' },
-    { question: 'Is Audifort a treatment for tinnitus or hearing loss?', answer: 'No treatment effect is established by the reviewed official material. A hearing professional can assess symptoms and discuss appropriate care.' }
+    { question: 'How is Audifort taken?', answer: 'Use one full dropper, about 15 drops, each day under the tongue or diluted in water or natural juice, according to the FAQ.' },
+    { question: 'What does the two-bottle package cost?', answer: 'At the September 30, 2026 review, it cost $158 before shipping. Confirm the current price and delivery charges at checkout.' },
+    { question: 'Is the refund window 90 days?', answer: 'The sales and return pages refer to 90 days, but a linked shipping policy requires the package to arrive within 60 days. Request the applicable terms in writing before ordering.' },
+    { question: 'Is Audifort a treatment for tinnitus or hearing loss?', answer: 'Audifort is presented as a hearing-wellness supplement, not an established treatment. A hearing professional can assess symptoms and discuss appropriate care.' }
   ],
-  conclusion: 'Audifort offers convenient drops and visible bundle pricing. Its ingredient detail and refund policies leave material questions. Inspect the Supplement Facts label and obtain written return terms; hearing-support claims are not established treatment efficacy.',
+  conclusion: 'Audifort brings a daily liquid format, clear package prices, and free US shipping on larger bundles to a hearing-wellness routine. For a confident purchase, inspect the complete Supplement Facts label, confirm the checkout total, and obtain written return terms. Treat its hearing-support message as the product’s intended use, while seeking professional care for hearing symptoms.',
   sources: [
     { label: 'Official Audifort order page, ingredients, offers, FAQs and guarantee', url: 'https://audisoothe.com/c/order-now.php' },
     { label: 'Official Audifort return policy', url: 'https://audisoothe.com/info/return-policy.html' },

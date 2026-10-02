@@ -20,7 +20,7 @@ const sections = [
   ['cons', 'Cons'],
   ['ingredients', 'Ingredients & composition'],
   ['how-it-works', 'How it works'],
-  ['who-its-for', 'Who it may be for'],
+  ['who-its-for', "Who it's for"],
   ['pricing', 'Kits & pricing'],
   ['guarantees', 'Guarantees'],
   ['manufacturer', 'Manufacturer'],
@@ -42,7 +42,7 @@ const sections = [
   {Astro.slots.has('cons') && <section class="review-section" id="cons"><h2>Cons</h2><slot name="cons" /></section>}
   {Astro.slots.has('ingredients') && <section class="review-section" id="ingredients"><h2>Ingredients & composition</h2><slot name="ingredients" /></section>}
   {Astro.slots.has('how-it-works') && <section class="review-section" id="how-it-works"><h2>How it works</h2><slot name="how-it-works" /></section>}
-  {Astro.slots.has('who-its-for') && <section class="review-section" id="who-its-for"><h2>Who it may be for</h2><slot name="who-its-for" /></section>}
+  {Astro.slots.has('who-its-for') && <section class="review-section" id="who-its-for"><h2>Who it's for</h2><slot name="who-its-for" /></section>}
   {Astro.slots.has('pricing') && <section class="review-section" id="pricing"><h2>Kits & pricing</h2><slot name="pricing" /></section>}
   {Astro.slots.has('guarantees') && <section class="review-section" id="guarantees"><h2>Guarantees</h2><slot name="guarantees" /></section>}
   {Astro.slots.has('manufacturer') && <section class="review-section" id="manufacturer"><h2>Manufacturer</h2><slot name="manufacturer" /></section>}
