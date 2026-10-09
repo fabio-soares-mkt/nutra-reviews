@@ -116,6 +116,7 @@ export const allRoutes = [
   ...categories.map(({ slug }) => `/categories/${slug}/`),
   '/research/',
   ...guides.map(({ href }) => href),
+  '/mental-clarity/',
   ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
