@@ -32,3 +32,17 @@ The production build writes to `dist/`. The existing Dockerfile copies that outp
 The current site has two introductory guides and six product reviews at `/{product-slug}-review/`. Prices and policies were checked on September 30, 2026; recheck them before future edits. Keep `allRoutes` in `src/data/content.ts` current when adding pages so the sitemap stays complete.
 
 GTM `GTM-N39R22HN` is installed globally. Review CTAs emit `affiliate_click` through `dataLayer`; GA4 is not called directly in site code. No account system or contact form is published. See `docs/tracking-affiliates.md` before changing commercial links or GTM tags.
+
+## SEO notifications through Make
+
+The Make scenario and its SUCCESS and FAILED email routes have been configured and validated externally. After an SEO workflow's build and commit succeed, or when either step fails, prepare a JSON payload and run from `site/`:
+
+```sh
+node scripts/seo-notify-make.mjs <payload-file.json>
+```
+
+Set `NUTRALENS_MAKE_WEBHOOK_URL=<configure-localmente>` in the local environment before sending. Never commit the actual webhook URL or a local `.env` file. The script requires valid JSON and an HTTPS webhook, then exits with a nonzero code for a configuration, payload, network, or HTTP error. An unavailable webhook means notification is pending; do not claim an email was sent.
+
+The payload contains `event`, `status`, `product`, `cluster`, `page_type`, `page_title`, `build_status`, `commit_status`, `commit_hash`, `commit_message`, `branch`, `publication_status`, `push_required`, and `pages[]`. Each page contains `type`, `title`, `slug`, `expected_url`, `source_file`, `build_status`, `commit_status`, and `publication_status`. `pages[]` can contain multiple pages or be empty when a failure occurs before any page is created. The script also sends `page_type` and `page_title` for each page to match the V5 webhook contract. On pre-commit failures, set `commit_hash` and `commit_message` to `null`; include an error summary in the payload when available.
+
+This utility sends the notification only. Build and commit are separate workflow gates. `git push` remains exclusively manual, and expected URLs are not published URLs until after push and deployment.
