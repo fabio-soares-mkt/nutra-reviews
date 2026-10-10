@@ -36,7 +36,16 @@ GTM `GTM-N39R22HN` is installed globally. Review CTAs emit `affiliate_click` thr
 
 ## SEO notifications through Make
 
-The Make scenario has SUCCESS and FAILED email routes. The workflow is implementation, project validations, `npm run build`, commit, `git push`, confirmation that `HEAD` reached `origin/main`, then SUCCESS notification. The user deploys manually to the VPS and reviews the live URL. Only after deployment and approved live review may the page be marked `PUBLISHED` or submitted for indexing in Google Search Console.
+The SEO workflow uses `HUMAN_REVIEW_POLICY: EXCEPTION_BASED` and `AUTO_CONTINUE_IF_ALL_REQUIRED_GATES_PASS: YES`. No routine human approval is needed before push for a head keyword, cluster, brief, article, commit, or push when all required gates pass. A YMYL review result of `PASS` is a passing validation gate; it does not require a separate approval. `PROVISIONAL_NO_PAID_METRICS` in `NO_CREDIT` alone is not an exception, but its public SERP evidence and future paid revalidation must remain recorded.
+
+The two operating modes are:
+
+- `PRODUCT_ONBOARDING`: validate supplied product and affiliate data, update the Product SEO Profile, build the review using existing CTA, tracking, metadata, canonical and layout patterns, validate assets and links, then run the build, commit, push, remote confirmation and Make gates.
+- `CLUSTER_PRODUCTION`: research demand and intent, validate SERPs, choose a head and distinct intents, check cannibalization, prepare the cluster, briefs and benchmarks, produce and validate the pages, then run the same technical gates. The standard shape is `CATEGORY → CLUSTER → 1 PILLAR → 3 SUPPORTING ARTICLES → RELATED REVIEW`. A pilot may have an approved smaller scope. Review links remain contextual and are omitted where they would be editorially forced.
+
+If any required gate returns `REVIEW`, `FAIL`, or low confidence, stop dependent steps and notify the reason and required human decision. Examples include YMYL or search intent review, low SERP or cluster confidence, high cannibalization risk, insufficient benchmarks or sources, missing or conflicting affiliate data, tracking failure, failed build, commit, or push, and an unexpectedly dirty working tree. Scenario 6567504 routes `needs_human_review` through its existing non-success email branch; `failed` with `failure_type: NEEDS_HUMAN_REVIEW` is the fallback. Include `failure_gate`, `failure_reason`, `required_human_action`, and `stages_not_executed` in the payload. Do not use pending human review as the default state for every page.
+
+The workflow is implementation, project validations, `npm run build`, commit, `git push`, confirmation that `HEAD` reached `origin/main`, then SUCCESS notification through Make. The user deploys manually to the VPS and reviews the live URL. This post-deploy live QA is the normal human gate. Only after deployment and approved live review may the page be marked `PUBLISHED` or submitted for indexing in Google Search Console.
 
 Codex may push `main` to `origin/main` only after the build and commit pass, the branch and committed files are confirmed, the working tree has no unexpected changes, and the real commit hash is captured. Check `git status` and `git log -1 --oneline` before pushing. After pushing, compare `git rev-parse HEAD` with `git rev-parse origin/main`; if they differ, mark the push `FAILED_OR_UNCONFIRMED` and do not send SUCCESS. `npm run dev` and local visual review are optional.
 
