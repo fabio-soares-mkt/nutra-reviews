@@ -4,7 +4,7 @@ import Container from '../../components/Container.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import EditorialCard from '../../components/EditorialCard.astro';
 import CategoryCard from '../../components/CategoryCard.astro';
-import { categories, guides, reviewItems } from '../../data/content';
+import { categories, guides, mentalClarityArticles, reviewItems } from '../../data/content';
 import type { Category } from '../../data/content';
 
 export function getStaticPaths() {
@@ -12,7 +12,7 @@ export function getStaticPaths() {
 }
 interface Props { category: Category }
 const { category } = Astro.props;
-const relatedGuides = guides.filter((guide) => guide.category === category.title);
+const relatedGuides = [...guides, ...mentalClarityArticles].filter((guide) => guide.category === category.title);
 const categoryReviews = reviewItems.filter((review) => review.category === category.title);
 const otherCategories = categories.filter(({ slug }) => slug !== category.slug).slice(0, 3);
 ---

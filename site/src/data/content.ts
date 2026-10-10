@@ -104,6 +104,37 @@ export const guides: EditorialItem[] = [
   },
 ];
 
+export const mentalClarityArticles: EditorialItem[] = [
+  {
+    title: 'Mental Clarity: What It Means and What Can Affect It',
+    description: 'What the phrase means, how it differs from focus and brain fog, and when a change deserves professional attention.',
+    href: '/mental-clarity/',
+    label: 'Pillar guide',
+    category: 'Brain & Focus',
+  },
+  {
+    title: 'How to Improve Mental Clarity: Practical Habits for Clearer Thinking',
+    description: 'A practical guide to sleep, movement, attention and daily routines without promising a quick fix.',
+    href: '/how-to-improve-mental-clarity/',
+    label: 'Supporting guide',
+    category: 'Brain & Focus',
+  },
+  {
+    title: 'How to Improve Mental Clarity Without Coffee: Practical Options',
+    description: 'Coffee-free ways to approach a difficult task, with clear limits on caffeine and health claims.',
+    href: '/how-to-improve-mental-clarity-without-coffee/',
+    label: 'Supporting guide',
+    category: 'Brain & Focus',
+  },
+  {
+    title: 'Why Do I Lose Focus in the Afternoon? Possible Reasons to Consider',
+    description: 'An evidence-aware explanation of an afternoon focus dip, what to observe and when to seek care.',
+    href: '/why-do-i-lose-focus-in-the-afternoon/',
+    label: 'Supporting guide',
+    category: 'Brain & Focus',
+  },
+];
+
 export { reviewItems };
 
 export const primaryNav = [
@@ -116,7 +147,7 @@ export const allRoutes = [
   ...categories.map(({ slug }) => `/categories/${slug}/`),
   '/research/',
   ...guides.map(({ href }) => href),
-  '/mental-clarity/',
+  ...mentalClarityArticles.map(({ href }) => href),
   ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
