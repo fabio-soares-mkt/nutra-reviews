@@ -42,6 +42,7 @@ const packageUnit = product.id === 'prostavive' ? 'tub' : 'bottle';
   <div slot="summary">
     <p>{review.whatItIs}</p>
     <ul>{review.snapshot.map((point) => <li>{point}</li>)}</ul>
+    {product.id === 'phytomemone' && <p>If you are still exploring the broader subject, our <a href="/mental-clarity/">guide to mental clarity</a> explains the term and its limits, while <a href="/how-to-improve-mental-clarity/">practical ways to support clearer thinking</a> covers general habits. Those guides offer context, not evidence that this product works.</p>}
   </div>
 
   <div slot="verdict"><p>{review.verdict}</p></div>
