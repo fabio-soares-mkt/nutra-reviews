@@ -30,13 +30,15 @@ The production build writes to `dist/`. The existing Dockerfile copies that outp
 - `src/pages/`: static routes and `sitemap.xml`.
 - `src/styles/global.css`: visual system and responsive styles.
 
-The current site has two introductory guides and six product reviews at `/{product-slug}-review/`. Prices and policies were checked on September 30, 2026; recheck them before future edits. Keep `allRoutes` in `src/data/content.ts` current when adding pages so the sitemap stays complete.
+The current site has two introductory guides, the four-page Mental Clarity informational cluster, and six product reviews at `/{product-slug}-review/`. Prices and policies were checked on September 30, 2026; recheck them before future edits. Keep `allRoutes` in `src/data/content.ts` current when adding pages so the sitemap stays complete.
 
 GTM `GTM-N39R22HN` is installed globally. Review CTAs emit `affiliate_click` through `dataLayer`; GA4 is not called directly in site code. No account system or contact form is published. See `docs/tracking-affiliates.md` before changing commercial links or GTM tags.
 
 ## SEO notifications through Make
 
-The V8 SEO workflow uses `RECOVERY_POLICY: AUTO_FIRST`, `HUMAN_ESCALATION_POLICY: ONLY_AFTER_RECOVERY_EXHAUSTED`, `HUMAN_REVIEW_POLICY: EXCEPTION_BASED`, and `AUTO_CONTINUE_IF_ALL_REQUIRED_GATES_PASS: YES`. No routine human approval is needed before push for a head keyword, cluster, brief, article, commit, or push when all required gates pass. A YMYL review result of `PASS` is a passing validation gate; it does not require a separate approval. `PROVISIONAL_NO_PAID_METRICS` in `NO_CREDIT` alone is not an exception, but its public SERP evidence and future paid revalidation must remain recorded.
+The V9 SEO workflow adds `EDITORIAL_COMMERCE_POLICY: CONTEXTUAL_TRANSITION` while preserving V8 `RECOVERY_POLICY: AUTO_FIRST`, `HUMAN_ESCALATION_POLICY: ONLY_AFTER_RECOVERY_EXHAUSTED`, `HUMAN_REVIEW_POLICY: EXCEPTION_BASED`, and `AUTO_CONTINUE_IF_ALL_REQUIRED_GATES_PASS: YES`. No routine human approval is needed before push for a head keyword, cluster, brief, article, commit, or push when all required gates pass. A YMYL review result of `PASS` is a passing validation gate; it does not require a separate approval. `PROVISIONAL_NO_PAID_METRICS` in `NO_CREDIT` alone is not an exception, but its public SERP evidence and future paid revalidation must remain recorded.
+
+For every cluster page, assess `COMMERCIAL_TRANSITION_RELEVANCE: HIGH | MEDIUM | LOW | NONE` from the page's actual intent and section. Each supporting article needs a contextual link to its pillar, and the pillar links to each existing child. `INTERNAL_LINKING_GATE: PASS` requires these paths and working internal routes. Review links are separate: at most one contextual review link when relevance is HIGH or MEDIUM and the text supports it; LOW or NONE means omit it. A product review should offer a useful path back to informational content. Informational pages do not require direct affiliate links, and the review retains its own AffiliateCTA components.
 
 The two operating modes are:
 
