@@ -135,6 +135,37 @@ export const mentalClarityArticles: EditorialItem[] = [
   },
 ];
 
+export const oralProbioticsArticles: EditorialItem[] = [
+  {
+    title: 'Oral Probiotics: What They Are and What the Evidence Says',
+    description: 'A clear introduction to oral probiotics, the oral microbiome, and the limits of research on breath and gum health.',
+    href: '/oral-probiotics/',
+    label: 'Pillar guide',
+    category: 'Supplements',
+  },
+  {
+    title: 'What Is the Oral Microbiome?',
+    description: 'How microbes live in the mouth, what can affect them, and which daily dental habits have established value.',
+    href: '/oral-microbiome/',
+    label: 'Supporting guide',
+    category: 'Supplements',
+  },
+  {
+    title: 'Oral Probiotics for Bad Breath: What Does the Evidence Say?',
+    description: 'A careful look at the mixed clinical evidence for probiotics and persistent bad breath.',
+    href: '/oral-probiotics-for-bad-breath/',
+    label: 'Supporting guide',
+    category: 'Supplements',
+  },
+  {
+    title: 'Oral Probiotics for Gum Health: Evidence and Limits',
+    description: 'What studies of probiotics and gum health can and cannot tell us, alongside established dental care.',
+    href: '/oral-probiotics-for-gum-health/',
+    label: 'Supporting guide',
+    category: 'Supplements',
+  },
+];
+
 export { reviewItems };
 
 export const primaryNav = [
@@ -148,6 +179,7 @@ export const allRoutes = [
   '/research/',
   ...guides.map(({ href }) => href),
   ...mentalClarityArticles.map(({ href }) => href),
+  ...oralProbioticsArticles.map(({ href }) => href),
   ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
