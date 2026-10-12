@@ -197,6 +197,37 @@ export const jointHealthArticles: EditorialItem[] = [
   },
 ];
 
+export const bloodSugarBalanceArticles: EditorialItem[] = [
+  {
+    title: 'Blood Sugar Balance: What It Means and What Affects It',
+    description: 'An evidence-aware overview of everyday glucose changes, meals, movement, and supplement-claim limits.',
+    href: '/blood-sugar-balance/',
+    label: 'Pillar guide',
+    category: 'Weight & Metabolism',
+  },
+  {
+    title: 'How Food Affects Blood Sugar',
+    description: 'A practical look at carbohydrates, meal composition, and why individual context matters.',
+    href: '/how-food-affects-blood-sugar/',
+    label: 'Supporting guide',
+    category: 'Weight & Metabolism',
+  },
+  {
+    title: 'Walking After Eating and Blood Sugar',
+    description: 'What post-meal movement may do, how to begin, and when medication safety changes the plan.',
+    href: '/walking-after-eating-blood-sugar/',
+    label: 'Supporting guide',
+    category: 'Weight & Metabolism',
+  },
+  {
+    title: 'Blood Sugar Supplements: Evidence, Labels, and Safety',
+    description: 'How to assess supplement claims without mistaking ingredient studies for product proof.',
+    href: '/blood-sugar-supplements/',
+    label: 'Supporting guide',
+    category: 'Weight & Metabolism',
+  },
+];
+
 export { reviewItems };
 
 export const primaryNav = [
@@ -212,6 +243,7 @@ export const allRoutes = [
   ...mentalClarityArticles.map(({ href }) => href),
   ...oralProbioticsArticles.map(({ href }) => href),
   ...jointHealthArticles.map(({ href }) => href),
+  ...bloodSugarBalanceArticles.map(({ href }) => href),
   ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
