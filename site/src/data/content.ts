@@ -166,6 +166,37 @@ export const oralProbioticsArticles: EditorialItem[] = [
   },
 ];
 
+export const jointHealthArticles: EditorialItem[] = [
+  {
+    title: 'Joint Health: Everyday Habits, Mobility, and Evidence',
+    description: 'An evidence-aware overview of joint function, sustainable habits, symptoms that need assessment, and supplement claims.',
+    href: '/joint-health/',
+    label: 'Pillar guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Joint Mobility Exercises: Movement Basics for Everyday Life',
+    description: 'How range of motion, strength and low-impact activity differ, with safe starting points and limits.',
+    href: '/joint-mobility-exercises/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Joint Stiffness After Rest: What to Notice and When to Seek Care',
+    description: 'A careful guide to stiffness after rest, symptom context and when a clinician should assess a change.',
+    href: '/joint-stiffness-after-rest/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Joint Health Supplements: Evidence and Label Questions',
+    description: 'How to assess ingredient studies, product labels and the limits of joint-support claims.',
+    href: '/joint-health-supplements/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+];
+
 export { reviewItems };
 
 export const primaryNav = [
@@ -180,6 +211,7 @@ export const allRoutes = [
   ...guides.map(({ href }) => href),
   ...mentalClarityArticles.map(({ href }) => href),
   ...oralProbioticsArticles.map(({ href }) => href),
+  ...jointHealthArticles.map(({ href }) => href),
   ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
