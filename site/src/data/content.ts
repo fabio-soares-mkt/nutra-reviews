@@ -259,6 +259,37 @@ export const prostateHealthArticles: EditorialItem[] = [
   },
 ];
 
+export const hearingHealthArticles: EditorialItem[] = [
+  {
+    title: 'Hearing Health: How to Protect Your Ears and Recognize Changes',
+    description: 'How hearing works, noise protection, changes to notice, professional care and the limits of supplement claims.',
+    href: '/hearing-health/',
+    label: 'Pillar guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Signs of Hearing Loss: What to Notice and When to Get Help',
+    description: 'Common communication changes, hearing tests and symptoms that need prompt attention.',
+    href: '/signs-of-hearing-loss/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'How to Protect Your Hearing From Everyday Loud Noise',
+    description: 'Volume, duration, distance and hearing protection at home, at work and at events.',
+    href: '/how-to-protect-your-hearing/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Do Hearing Supplements Work? Evidence, Claims and Safety',
+    description: 'How to assess hearing and tinnitus claims, finished-product evidence, labels and safety.',
+    href: '/do-hearing-supplements-work/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+];
+
 export { reviewItems };
 
 export const primaryNav = [
@@ -276,6 +307,7 @@ export const allRoutes = [
   ...jointHealthArticles.map(({ href }) => href),
   ...bloodSugarBalanceArticles.map(({ href }) => href),
   ...prostateHealthArticles.map(({ href }) => href),
+  ...hearingHealthArticles.map(({ href }) => href),
   ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
