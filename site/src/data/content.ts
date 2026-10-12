@@ -228,6 +228,37 @@ export const bloodSugarBalanceArticles: EditorialItem[] = [
   },
 ];
 
+export const prostateHealthArticles: EditorialItem[] = [
+  {
+    title: 'Prostate Health: What the Prostate Does and When to Seek Care',
+    description: 'Prostate function, common conditions, symptom boundaries, screening decisions, and supplement-claim limits.',
+    href: '/prostate-health/',
+    label: 'Pillar guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Signs of Prostate Problems: Symptoms and When to Seek Care',
+    description: 'How to recognize a concerning change without treating a symptom list as a diagnosis.',
+    href: '/signs-of-prostate-problems/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Foods for Prostate Health: What Diet Can and Cannot Do',
+    description: 'A balanced look at eating patterns, individual foods, and disease-prevention claim limits.',
+    href: '/foods-for-prostate-health/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+  {
+    title: 'Do Prostate Supplements Work? Evidence and Safety',
+    description: 'How to assess ingredient research, finished-product evidence, labels and safety.',
+    href: '/do-prostate-supplements-work/',
+    label: 'Supporting guide',
+    category: 'Wellness',
+  },
+];
+
 export { reviewItems };
 
 export const primaryNav = [
@@ -244,6 +275,7 @@ export const allRoutes = [
   ...oralProbioticsArticles.map(({ href }) => href),
   ...jointHealthArticles.map(({ href }) => href),
   ...bloodSugarBalanceArticles.map(({ href }) => href),
+  ...prostateHealthArticles.map(({ href }) => href),
   ...reviewItems.map(({ href }) => href),
   '/about/',
   '/how-we-review/',
