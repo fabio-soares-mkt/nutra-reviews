@@ -15,7 +15,7 @@ export type EditorialItem = {
   href: string;
   label: string;
   category: string;
-  image?: { src: ImageMetadata; alt: string };
+  image?: { src: ImageMetadata | string; alt: string };
 };
 
 export type Category = {
@@ -111,6 +111,7 @@ export const mentalClarityArticles: EditorialItem[] = [
     href: '/mental-clarity/',
     label: 'Pillar guide',
     category: 'Brain & Focus',
+    image: { src: '/images/articles/mental-clarity/mental-clarity-card.jpg', alt: 'Open notebook, pen, and water on a sunlit desk' },
   },
   {
     title: 'How to Improve Mental Clarity: Practical Habits for Clearer Thinking',
@@ -118,6 +119,7 @@ export const mentalClarityArticles: EditorialItem[] = [
     href: '/how-to-improve-mental-clarity/',
     label: 'Supporting guide',
     category: 'Brain & Focus',
+    image: { src: '/images/articles/how-to-improve-mental-clarity/how-to-improve-mental-clarity-card.jpg', alt: 'Person writing a checklist beside a laptop and tea' },
   },
   {
     title: 'How to Improve Mental Clarity Without Coffee: Practical Options',
@@ -125,6 +127,7 @@ export const mentalClarityArticles: EditorialItem[] = [
     href: '/how-to-improve-mental-clarity-without-coffee/',
     label: 'Supporting guide',
     category: 'Brain & Focus',
+    image: { src: '/images/articles/how-to-improve-mental-clarity-without-coffee/how-to-improve-mental-clarity-without-coffee-card.jpg', alt: 'Herbal tea and lemon water beside a notebook' },
   },
   {
     title: 'Why Do I Lose Focus in the Afternoon? Possible Reasons to Consider',
@@ -132,6 +135,7 @@ export const mentalClarityArticles: EditorialItem[] = [
     href: '/why-do-i-lose-focus-in-the-afternoon/',
     label: 'Supporting guide',
     category: 'Brain & Focus',
+    image: { src: '/images/articles/why-do-i-lose-focus-in-the-afternoon/why-do-i-lose-focus-in-the-afternoon-card.jpg', alt: 'Person resting their head at a desk in afternoon light' },
   },
 ];
 
@@ -142,6 +146,7 @@ export const oralProbioticsArticles: EditorialItem[] = [
     href: '/oral-probiotics/',
     label: 'Pillar guide',
     category: 'Supplements',
+    image: { src: '/images/articles/oral-probiotics/oral-probiotics-card.jpg', alt: 'Capsule jar, toothbrush, and water by a bathroom sink' },
   },
   {
     title: 'What Is the Oral Microbiome?',
@@ -149,6 +154,7 @@ export const oralProbioticsArticles: EditorialItem[] = [
     href: '/oral-microbiome/',
     label: 'Supporting guide',
     category: 'Supplements',
+    image: { src: '/images/articles/oral-microbiome/oral-microbiome-card.jpg', alt: 'Toothbrushes, floss, and water by a bathroom sink' },
   },
   {
     title: 'Oral Probiotics for Bad Breath: What Does the Evidence Say?',
@@ -156,6 +162,7 @@ export const oralProbioticsArticles: EditorialItem[] = [
     href: '/oral-probiotics-for-bad-breath/',
     label: 'Supporting guide',
     category: 'Supplements',
+    image: { src: '/images/articles/oral-probiotics-for-bad-breath/oral-probiotics-for-bad-breath-card.jpg', alt: 'Mouthwash, toothbrushes, mint, and capsules by a sink' },
   },
   {
     title: 'Oral Probiotics for Gum Health: Evidence and Limits',
@@ -163,6 +170,7 @@ export const oralProbioticsArticles: EditorialItem[] = [
     href: '/oral-probiotics-for-gum-health/',
     label: 'Supporting guide',
     category: 'Supplements',
+    image: { src: '/images/articles/oral-probiotics-for-gum-health/oral-probiotics-for-gum-health-card.jpg', alt: 'Toothbrushes, floss, capsules, and water by a sink' },
   },
 ];
 
@@ -173,6 +181,7 @@ export const jointHealthArticles: EditorialItem[] = [
     href: '/joint-health/',
     label: 'Pillar guide',
     category: 'Wellness',
+    image: { src: '/images/articles/joint-health/joint-health-card.jpg', alt: 'Person holding a knee while seated on an exercise mat' },
   },
   {
     title: 'Joint Mobility Exercises: Movement Basics for Everyday Life',
@@ -180,6 +189,7 @@ export const jointHealthArticles: EditorialItem[] = [
     href: '/joint-mobility-exercises/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/joint-mobility-exercises/joint-mobility-exercises-card.jpg', alt: 'Woman doing a side lunge on an exercise mat' },
   },
   {
     title: 'Joint Stiffness After Rest: What to Notice and When to Seek Care',
@@ -187,6 +197,7 @@ export const jointHealthArticles: EditorialItem[] = [
     href: '/joint-stiffness-after-rest/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/joint-stiffness-after-rest/joint-stiffness-after-rest-card.jpg', alt: 'Woman stretching a leg while sitting on a bed' },
   },
   {
     title: 'Joint Health Supplements: Evidence and Label Questions',
@@ -194,6 +205,7 @@ export const jointHealthArticles: EditorialItem[] = [
     href: '/joint-health-supplements/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/joint-health-supplements/joint-health-supplements-card.jpg', alt: 'Supplement bottles beside a knee model and water' },
   },
 ];
 
@@ -204,6 +216,7 @@ export const bloodSugarBalanceArticles: EditorialItem[] = [
     href: '/blood-sugar-balance/',
     label: 'Pillar guide',
     category: 'Weight & Metabolism',
+    image: { src: '/images/articles/blood-sugar-balance/blood-sugar-balance-card.jpg', alt: 'Yogurt with berries, nuts, and fruit on a table' },
   },
   {
     title: 'How Food Affects Blood Sugar',
@@ -211,6 +224,7 @@ export const bloodSugarBalanceArticles: EditorialItem[] = [
     href: '/how-food-affects-blood-sugar/',
     label: 'Supporting guide',
     category: 'Weight & Metabolism',
+    image: { src: '/images/articles/how-food-affects-blood-sugar/how-food-affects-blood-sugar-card.jpg', alt: 'Salmon, vegetables, and grains served on a plate' },
   },
   {
     title: 'Walking After Eating and Blood Sugar',
@@ -218,6 +232,7 @@ export const bloodSugarBalanceArticles: EditorialItem[] = [
     href: '/walking-after-eating-blood-sugar/',
     label: 'Supporting guide',
     category: 'Weight & Metabolism',
+    image: { src: '/images/articles/walking-after-eating-blood-sugar/walking-after-eating-blood-sugar-card.jpg', alt: 'Woman walking along a tree-lined sidewalk' },
   },
   {
     title: 'Blood Sugar Supplements: Evidence, Labels, and Safety',
@@ -225,6 +240,7 @@ export const bloodSugarBalanceArticles: EditorialItem[] = [
     href: '/blood-sugar-supplements/',
     label: 'Supporting guide',
     category: 'Weight & Metabolism',
+    image: { src: '/images/articles/blood-sugar-supplements/blood-sugar-supplements-card.jpg', alt: 'Supplement bottles and capsules beside a meal' },
   },
 ];
 
@@ -235,6 +251,7 @@ export const prostateHealthArticles: EditorialItem[] = [
     href: '/prostate-health/',
     label: 'Pillar guide',
     category: 'Wellness',
+    image: { src: '/images/articles/prostate-health/prostate-health-card.jpg', alt: 'Middle-aged man seated at home beside a glass of water' },
   },
   {
     title: 'Signs of Prostate Problems: Symptoms and When to Seek Care',
@@ -242,6 +259,7 @@ export const prostateHealthArticles: EditorialItem[] = [
     href: '/signs-of-prostate-problems/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/signs-of-prostate-problems/signs-of-prostate-problems-card.jpg', alt: 'Middle-aged man seated on a bed holding a glass of water' },
   },
   {
     title: 'Foods for Prostate Health: What Diet Can and Cannot Do',
@@ -249,6 +267,7 @@ export const prostateHealthArticles: EditorialItem[] = [
     href: '/foods-for-prostate-health/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/foods-for-prostate-health/foods-for-prostate-health-card.jpg', alt: 'Salmon, tomatoes, greens, berries, and nuts on a table' },
   },
   {
     title: 'Do Prostate Supplements Work? Evidence and Safety',
@@ -256,6 +275,7 @@ export const prostateHealthArticles: EditorialItem[] = [
     href: '/do-prostate-supplements-work/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/do-prostate-supplements-work/do-prostate-supplements-work-card.jpg', alt: 'Man examining a supplement bottle at a table' },
   },
 ];
 
@@ -266,6 +286,7 @@ export const hearingHealthArticles: EditorialItem[] = [
     href: '/hearing-health/',
     label: 'Pillar guide',
     category: 'Wellness',
+    image: { src: '/images/articles/hearing-health/hearing-health-card.jpg', alt: 'Headphones and earplugs arranged on a table' },
   },
   {
     title: 'Signs of Hearing Loss: What to Notice and When to Get Help',
@@ -273,6 +294,7 @@ export const hearingHealthArticles: EditorialItem[] = [
     href: '/signs-of-hearing-loss/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/signs-of-hearing-loss/signs-of-hearing-loss-card.jpg', alt: 'Man cupping an ear while listening to another person' },
   },
   {
     title: 'How to Protect Your Hearing From Everyday Loud Noise',
@@ -280,6 +302,7 @@ export const hearingHealthArticles: EditorialItem[] = [
     href: '/how-to-protect-your-hearing/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/how-to-protect-your-hearing/how-to-protect-your-hearing-card.jpg', alt: 'Headphones and earplugs on a desk' },
   },
   {
     title: 'Do Hearing Supplements Work? Evidence, Claims and Safety',
@@ -287,6 +310,7 @@ export const hearingHealthArticles: EditorialItem[] = [
     href: '/do-hearing-supplements-work/',
     label: 'Supporting guide',
     category: 'Wellness',
+    image: { src: '/images/articles/do-hearing-supplements-work/do-hearing-supplements-work-card.jpg', alt: 'Supplement bottles, capsules, and a notebook on a desk' },
   },
 ];
 

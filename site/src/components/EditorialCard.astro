@@ -6,7 +6,11 @@ const { item, featured = false } = Astro.props;
 ---
 <article class:list={['editorial-card', { 'editorial-card--featured': featured }]}>
   <div class:list={['editorial-card__visual', { 'editorial-card__visual--photo': item.image, 'editorial-card__visual--product': item.label === 'Review' }]} aria-hidden={item.image ? undefined : 'true'}>
-    {item.image ? <Image src={item.image.src} alt={item.image.alt} loading="lazy" decoding="async" /> : <><span class="editorial-card__rings"></span><span>{item.category}</span></>}
+    {item.image ? (
+      typeof item.image.src === 'string'
+        ? <img src={item.image.src} alt={item.image.alt} width="1254" height="1254" loading="lazy" decoding="async" />
+        : <Image src={item.image.src} alt={item.image.alt} loading="lazy" decoding="async" />
+    ) : <><span class="editorial-card__rings"></span><span>{item.category}</span></>}
   </div>
   <div class="editorial-card__content">
     <div class="editorial-card__meta"><span>{item.label}</span><span>·</span><span>{item.category}</span></div>
